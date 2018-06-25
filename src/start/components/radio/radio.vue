@@ -42,6 +42,7 @@ export default {
   methods:{
     updateVal(){//当用户点击radio时,触发change事件更新v-model
       this.$emit('change',this.$refs.radio.value);
+      this.$emit('input',this.$refs.radio.value);
     }
   }
 }

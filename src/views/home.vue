@@ -33,8 +33,12 @@
       <xm-radio v-model="radio" :value="1">备选项1</xm-radio>
       <xm-radio v-model="radio" :value="2">备选项2</xm-radio>
       <xm-radio v-model="radio" disabled :value="3">备选项2</xm-radio>
-      <xm-radio v-model="radio" checked disabled :value="4">备选项2</xm-radio>
+      <xm-radio v-model="radio" checked :value="4">备选项2</xm-radio>
       <h3>复选按钮</h3>
+      <xm-checkbox v-model="checkbox" checked value="1" name="1" @change="input">巴士</xm-checkbox>
+      <xm-checkbox v-model="checkbox" value="2" name="1" @change="input">火车</xm-checkbox>
+      <xm-checkbox v-model="checkbox" value="3" name="1" @change="input" disabled>飞机--disabled</xm-checkbox>
+      <xm-checkbox v-model="checkbox" value="4" name="1" @change="input">单车</xm-checkbox>
     </div>
 </template>
 
@@ -59,6 +63,9 @@ export default {
       this.closeFlag = false
     },
     radioChange(){
+      console.log(this.checkbox)
+    },
+    input(value){
       console.log(this.checkbox)
     }
   }
