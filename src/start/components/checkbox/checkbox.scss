@@ -50,12 +50,17 @@
             background-color: $primary-color;
         }
     }
-    &.disabled .xm__checkbox--inner{
-        background-color: $btn-disable-bg;
-        border: 1px solid $btn-disable-border;
-        color:$btn-disable-color;
-        &::after{
-            @include exactness($btn-disable-color)
+    &.disabled {
+        .xm__checkbox--inner{
+            background-color: $btn-disable-bg;
+            border: 1px solid $btn-disable-border;
+            color:$btn-disable-color;
+        }
+        .xm__checkbox--inner.is-checked{
+            &::after{
+                @include exactness($btn-disable-color)
+            }
         }
     }
+    
 }
