@@ -2,7 +2,7 @@
     <label class="xm__checkbox" :class="[{'disabled':disabled}]">
         <span class="xm__checkbox--input">
           <span class="xm__checkbox--inner" :class="[{'is-checked':isChecked}]"></span>
-          <input :name='name' :checked="checked" ref="checkbox" type="checkbox" :value="value" @change="onChange" :disabled="disabled" v-model="checkedModels"/>
+          <input :name='name' ref="checkbox" type="checkbox" :value="value" @change="onChange" :disabled="disabled" v-model="checkedModels"/>
         </span>
         <span class="xm__checkbox--text">
           <slot></slot>
@@ -46,24 +46,24 @@ export default {
   },
   data () {
     return {
-      checkedModels: [],
+      checkedModels: false,
       isChecked:false
     }
   },
   methods: {
     inint(){
-      this.$refs.checkbox.checked = this.checked
-      this.isChecked = this.$refs.checkbox.checked
+      this.checkedModels = this.checked
+      this.isChecked = this.checkedModels
     },
     onChange (event) { // @change 组件改变后的操作
       if (this.disabled) {
         return
       }
       if(typeof this.model === 'boolean'){
-        this.isChecked = this.$refs.checkbox.checked
+        this.isChecked = this.checkedModels
         this.$emit('change', this.isChecked)
       }else if(Object.prototype.toString.call(this.model)=='[object Array]'){
-        this.isChecked = this.$refs.checkbox.checked
+        this.isChecked = this.checkedModels
         let checkboxlist = document.querySelectorAll('input[type="checkbox"][name='+ '"' +this.name+ '"' +']')
         let checkedlist = []
         for (let index = 0; index < checkboxlist.length; index++) {
