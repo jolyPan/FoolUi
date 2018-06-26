@@ -1,54 +1,53 @@
-
-  .xm-radio-wrap{
-    .xm-radio{
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      border: 1px solid #dcdfe6;
-      display: inline-block;
-      position: relative;
-      &:hover{
-        border: 1px solid $primary-color;
+.xm-radio-wrap {
+  .xm-radio {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid #dcdfe6;
+    display: inline-block;
+    position: relative;
+    &:hover {
+      border: 1px solid $primary-color;
+    }
+    &.checked {
+      background-color: $primary-color;
+      &:hover {
+        border: 1px solid #dcdfe6;
       }
-      &.checked{
-        background-color: $primary-color;  
-        &:hover{
-          border: 1px solid #dcdfe6;
-        }
-        &::after {
-            opacity: 1;
-            transform: scale(1) translate3d(-50%, -50%, 0);
-        }
-      }
-      
-      &.disabled{
-        border-color: $btn-disable-border;
-        background-color: $btn-disable-bg;
-        color: $btn-disable-color;
-      }
-      &::after{
-        content: '';
-        width: 5px;
-        height: 5px;
-        border-radius: 50%;
-        display: inline-block;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        background-color: #ffffff;  
-        transition: all 1s ease;
-        opacity: 0;
-        transform: scale(1.5) translate3d(-50%, -50%, 0);
-      }
-      &.disabled::after{
-        background-color: #ccc;
-      }
-      input[type=radio]{
-        opacity: 0;
-        margin: 0;
+      &::after {
+        opacity: 1;
+        transform: scale(1) translate3d(-50%, -50%, 0);
       }
     }
-    .content{
-      margin-left: 5px;
+
+    &.disabled {
+      border-color: $btn-disable-border;
+      background-color: $btn-disable-bg;
+      color: $btn-disable-color;
+    }
+    &::after {
+      content: "";
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      display: inline-block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      background-color: #ffffff;
+      transition: all 1s ease;
+      opacity: 0;
+      transform: scale(1.5) translate3d(-50%, -50%, 0);
+    }
+    &.disabled::after {
+      background-color: #ccc;
+    }
+    input[type="radio"] {
+      opacity: 0;
+      margin: 0;
     }
   }
+  .content {
+    margin-left: 5px;
+  }
+}

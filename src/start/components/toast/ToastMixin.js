@@ -5,34 +5,34 @@ const ModalMixin = {
       default: false
     }
   },
-  data () {
+  data() {
     return {
       isActive: false
-    }
+    };
   },
   methods: {
-    active () {
-      this.isActive = true
+    active() {
+      this.isActive = true;
     }
   },
 
   watch: {
-    isVisible (val) {
-      this.isActive = val
+    isVisible(val) {
+      this.isActive = val;
     }
   },
 
-  mounted () {
+  mounted() {
     this.$nextTick(() => {
-      document.body.appendChild(this.$el)
+      document.body.appendChild(this.$el);
       if (this.isVisible) {
-        this.active()
+        this.active();
       }
-    })
+    });
   },
-  beforeDestroy () {
-    this.$el.remove()
+  beforeDestroy() {
+    this.$el.remove();
   }
-}
+};
 
-export default ModalMixin
+export default ModalMixin;

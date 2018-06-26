@@ -1,6 +1,6 @@
 <template>
   <transition name="fade">
-    <div class="xm__toast--wrap" v-show="isVisible" ref="toast" >
+    <div class="xm__toast--wrap" v-show="isVisible" ref="toast">
       <div class="xm__mask" v-show="mask"></div>
       <div class="xm__toast xm__toast--bounceInDown animated" :class='classz' :style='directions'>
         <div v-if="type&&type=='default'" class=" xm__toast--loading">
@@ -30,7 +30,7 @@ export default {
     },
     callBack: {
       type: Function,
-      default () {}
+      default() { }
     },
     type: {
       type: String,
@@ -46,12 +46,12 @@ export default {
     },
   },
   methods: {
-    close () {
+    close() {
       this.$emit('close')
       this.isVisible = false
     }
   },
-  mounted () {
+  mounted() {
     setTimeout(() => {
       this.isVisible = true
     }, 100)
@@ -66,14 +66,14 @@ export default {
     }
   },
   computed: {
-    classz () {
+    classz() {
       if (!this.type) {
         return 'xm__toast--text'
       } else {
         return 'xm__toast--loading'
       }
     },
-    directions () {
+    directions() {
       if (this.direction === 'top') {
         return 'top:10%'
       } else if (this.direction === 'bottom') {

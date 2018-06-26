@@ -2,19 +2,15 @@
   <transition>
     <div class="xm__loading--wrap">
       <div class="xm__mask" v-if="fullScreen"></div>
-      <div 
-          class="xm__loading bounceInDown animated"
-          :class="[
+      <div class="xm__loading bounceInDown animated" :class="[
           {'xm__loading--fullScreen':fullScreen}
-          ]"
-      >   
-          <span class="xm__loading--loader" 
-          :class="[
+          ]">
+        <span class="xm__loading--loader" :class="[
           {'xm__loading--vertical':vertical,'borderRightTransparent':color}
-          ]"
-          :style="{'width': width+'px','height': height+'px','border-color': color,'border-width': borderWidth+'px'}"
-          ></span>
-          <span class="xm__loading--text" v-if="hasText"><slot>加载中...</slot></span>
+          ]" :style="{'width': width+'px','height': height+'px','border-color': color,'border-width': borderWidth+'px'}"></span>
+        <span class="xm__loading--text" v-if="hasText">
+          <slot>加载中...</slot>
+        </span>
       </div>
     </div>
   </transition>
@@ -58,5 +54,4 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  
 </style>

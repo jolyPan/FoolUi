@@ -1,0 +1,22 @@
+.xm__form--input {
+  .xm__form--control {
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.25;
+    color: #3e515b;
+    background-color: #fff;
+    border-radius: 4px;
+    background-image: none;
+    background-clip: padding-box;
+    border: 1px solid #c2cfd6;
+    &:hover {
+      border: 1px solid #587eb9;
+    }
+    &[disabled="disabled"] {
+      border-color: $btn-disable-border;
+      background-color: $btn-disable-bg;
+      color: $btn-disable-color;
+    }
+  }
+}

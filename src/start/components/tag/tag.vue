@@ -1,12 +1,11 @@
 <template>
-  <transition name="custom-classes-transition"
-    leave-active-class="animated flipOutY">
+  <transition name="custom-classes-transition" leave-active-class="animated flipOutY">
     <div class="xm_tag" :class="['xm_tag--' + type,{round:round}]" :style="{backgroundColor:bgColor,borderColor:borderColor,color:color}">
-        <span>
-          <slot>
-          </slot>
-        </span>
-        <i class="xm__icon--close" v-if="closable" @click="closeAction"></i>
+      <span>
+        <slot>
+        </slot>
+      </span>
+      <i class="xm__icon--close" v-if="closable" @click="closeAction"></i>
     </div>
   </transition>
 </template>
@@ -16,42 +15,42 @@
 export default {
   name: 'xm-tag',
   props: {
-    type:{
+    type: {
       type: String,
       default: 'default'
     },
-    closable:{
+    closable: {
       type: Boolean,
-      default:false
+      default: false
     },
-    bgColor:{
+    bgColor: {
       type: String,
-      default:''
+      default: ''
     },
-    color:{
+    color: {
       type: String,
-      default:''
+      default: ''
     },
-    borderColor:{
+    borderColor: {
       type: String,
-      default:''
+      default: ''
     },
     round: {
       type: Boolean,
-      default:false
+      default: false
     },
   },
-  data(){
+  data() {
     return {
-        flipOutY:false
+      flipOutY: false
     }
   },
-  methods:{
-    closeAction(){
+  methods: {
+    closeAction() {
       this.$emit('close')
     }
   },
-  beforeDestroy(){
+  beforeDestroy() {
     this.flipOutY = true
   }
 }
