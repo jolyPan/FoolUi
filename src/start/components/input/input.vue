@@ -1,6 +1,7 @@
 <template>
     <div class="xm__form--input">
-        <input :min="min" :max="max" :disabled="disabled" class="xm__form--control" :type="type" :placeholder="placeholder">
+        <input :min="min" :max="max" :disabled="disabled" v-model="value" class="xm__form--control" :type="type" :placeholder="placeholder">
+        <span class="xm__icon--close animate pulse"></span>
     </div>
 </template>
 <script>

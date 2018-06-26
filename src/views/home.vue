@@ -274,7 +274,10 @@ export default {
     },
     input(value) {
       console.log(this.checkbox)
-    }
+    },
+    gridClick () {
+      alert(1)
+    },
   }
 }
 </script>

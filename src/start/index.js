@@ -7,7 +7,7 @@ import Radio from "./components/radio/index";
 import Checkbox from "./components/checkbox/index";
 import Input from "./components/input/index";
 import Grid from "./components/grid/index";
-
+import Grids from "./components/grids/index";
 const components = {
   Button,
   Tag,
@@ -16,13 +16,18 @@ const components = {
   Radio,
   Checkbox,
   Input,
-  Grid
+  Grid,
+  Grids
 };
 const install = function(Vue) {
   if (install.installed) return;
   //   components.map(component => Vue.component(component.name, component))
   Object.keys(components).forEach(key => {
-    Vue.component(components[key].name, components[key]);
+    if (components[key].name) {
+      Vue.component(components[key].name, components[key]);
+    } else {
+      console.log("name为空");
+    }
   });
   Vue.prototype.$toast = Toast;
 };
