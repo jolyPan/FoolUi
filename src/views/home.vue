@@ -42,8 +42,23 @@
     <h3>文本框</h3>
     <div class="row">
       <div class="col-md-12">
-        <xm-input placeholder="请输入内容"></xm-input>
-        <xm-input disabled placeholder="请输入内容"></xm-input>
+        <div class="col-mg-6">
+          <xm-input type="email" v-model="inputval" @input="xminput" placeholder="请输入内容"></xm-input>
+          <xm-input type="tel" v-model="inputval" @input="xminput" placeholder="请输入内容"></xm-input>
+          <xm-input type="datetime-local" v-model="inputval" @input="xminput" placeholder="请输入内容"></xm-input>
+          <xm-input type="date" v-model="inputval" @input="xminput" placeholder="请输入内容"></xm-input>
+          <xm-input type="time" v-model="inputval" @input="xminput" placeholder="请输入内容"></xm-input>
+        </div>
+        <div class="col-mg-6">
+          <xm-input v-model="inputval" @input="xminput" placeholder="请输入内容"></xm-input>
+          <xm-input v-model="inputval" @input="xminput" disabled placeholder="请输入内容"></xm-input>
+          <xm-input v-model="inputval" @input="xminput" placeholder="请输入内容">
+            <span slot="icon" class="xm__icon--search"></span>
+          </xm-input>
+          <xm-input type="search" v-model="inputval" @input="xminput" placeholder="请输入内容"></xm-input>
+          <xm-input type="password" v-model="inputval" @input="xminput" placeholder="请输入内容"></xm-input>
+          <xm-input type="number" v-model="inputval" @input="xminput" placeholder="请输入内容"></xm-input>
+        </div>
       </div>
     </div>
     <h4>网格和图标</h4>
@@ -258,6 +273,7 @@ export default {
       closeFlag: true,
       radio: null,
       checkbox: [],
+      inputval: ""
     }
   },
   methods: {
@@ -275,9 +291,12 @@ export default {
     input(value) {
       console.log(this.checkbox)
     },
-    gridClick () {
+    gridClick() {
       alert(1)
     },
+    xminput() {
+      console.log(this.inputval)
+    }
   }
 }
 </script>
