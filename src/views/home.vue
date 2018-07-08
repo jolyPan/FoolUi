@@ -42,14 +42,14 @@
     <h3>文本框</h3>
     <div class="row">
       <div class="col-md-12">
-        <div class="col-mg-6">
+        <div class="col-md-6">
           <xm-input type="email" v-model="inputval" @input="xminput" placeholder="请输入内容"></xm-input>
           <xm-input type="tel" v-model="inputval" @input="xminput" placeholder="请输入内容"></xm-input>
           <xm-input type="datetime-local" v-model="inputval" @input="xminput" placeholder="请输入内容"></xm-input>
           <xm-input type="date" v-model="inputval" @input="xminput" placeholder="请输入内容"></xm-input>
           <xm-input type="time" v-model="inputval" @input="xminput" placeholder="请输入内容"></xm-input>
         </div>
-        <div class="col-mg-6">
+        <div class="col-md-6">
           <xm-input v-model="inputval" @input="xminput" placeholder="请输入内容"></xm-input>
           <xm-input v-model="inputval" @input="xminput" disabled placeholder="请输入内容"></xm-input>
           <xm-input v-model="inputval" @input="xminput" placeholder="请输入内容">
@@ -59,6 +59,15 @@
           <xm-input type="password" v-model="inputval" @input="xminput" placeholder="请输入内容"></xm-input>
           <xm-input type="number" v-model="inputval" @input="xminput" placeholder="请输入内容"></xm-input>
         </div>
+      </div>
+    </div>
+    <h4>slider滑块</h4>
+    <div class="row">
+      <div class="col-md-6">
+          <xm-slider :change="valueFun" :min="20" :max="80"></xm-slider>
+      </div>
+      <div class="col-md-6">
+          <xm-slider :change="valueFun" v-model="slider" :range="false"></xm-slider>
       </div>
     </div>
     <h4>网格和图标</h4>
@@ -266,39 +275,43 @@
 
 <script>
 export default {
-  name: '',
+  name: "",
   data() {
     return {
       msg: `Fool-ui - 基于vue2.x，可复用UI组件`,
       closeFlag: true,
       radio: null,
       checkbox: [],
-      inputval: ""
-    }
+      inputval: "",
+      slider: 20
+    };
   },
   methods: {
     btnClick() {
       this.$toast.text({
-        content: '风波之',
-      })
+        content: "风波之"
+      });
+    },
+    valueFun(right, left, width) {
+      console.log(right, left, width);
     },
     close() {
-      this.closeFlag = false
+      this.closeFlag = false;
     },
     radioChange() {
-      console.log(this.checkbox)
+      console.log(this.checkbox);
     },
     input(value) {
-      console.log(this.checkbox)
+      console.log(this.checkbox);
     },
     gridClick() {
-      alert(1)
+      alert(1);
     },
     xminput() {
-      console.log(this.inputval)
+      console.log(this.inputval);
     }
   }
-}
+};
 </script>
 <style scoped>
 </style>

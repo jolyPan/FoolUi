@@ -8,6 +8,7 @@ import Checkbox from "./components/checkbox/index";
 import Input from "./components/input/index";
 import Grid from "./components/grid/index";
 import Grids from "./components/grids/index";
+import Slider from "./components/slider/index"
 const components = {
   Button,
   Tag,
@@ -17,9 +18,10 @@ const components = {
   Checkbox,
   Input,
   Grid,
-  Grids
+  Grids,
+  Slider
 };
-const install = function(Vue) {
+const install = function (Vue) {
   if (install.installed) return;
   //   components.map(component => Vue.component(component.name, component))
   Object.keys(components).forEach(key => {
