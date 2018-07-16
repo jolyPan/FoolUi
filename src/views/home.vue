@@ -289,7 +289,7 @@ export default {
       checkbox: [],
       inputval: "",
       slider: 20,
-      stepList: ['发起工单', '主管审批', '经理审批', '总监核查', '结束'],
+      stepList: ['步骤一', '步骤二', '步骤三', '步骤四', '步骤五'],
       step: 0,
       loading:true
     };
