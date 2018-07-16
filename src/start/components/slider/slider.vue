@@ -199,6 +199,7 @@ export default {
 
     mySlider.addEventListener("touchend", end);
     mySlider.addEventListener("mouseup", end);
+    // mySlider.addEventListener("mouseout", end);
     this.myDefault();
   },
   watch: {

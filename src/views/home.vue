@@ -12,8 +12,13 @@
     <xm-button loading type="success">loading状态</xm-button>
     <xm-button bg-color="#fc0" color="#e0439a" border-color="#fc0">自定义颜色</xm-button>
     <br/><br/>
-    <xm-button bg-color="#fcb" color="#e0439a" border-color="#fcb" block no-radius class="btn__block">无圆角块状</xm-button>
-    <br/>
+    <xm-button no-radius>无圆角</xm-button>
+    <xm-button circle type="primary" @click="btnClick" icon="xm__icon--refresh"></xm-button>
+    <xm-button circle type="success" icon="xm__icon--checked"></xm-button>
+    <xm-button circle @click="btnClick" icon="xm__icon--search"></xm-button>
+    <xm-button circle type="error"  icon="xm__icon--delete"></xm-button>
+    <xm-button circle type="warning" icon="xm__icon--lock"></xm-button>
+    <br/><br/>
     <xm-button round long>100%宽圆角</xm-button>
     <br/><br/>
     <xm-button-group class="btn__group">
@@ -73,7 +78,7 @@
     <h4>步骤条</h4>
     <xm-step :loading="loading" :step="step" :step-list="stepList"></xm-step>
     <div class="row">
-      <xm-button type="primary" @click="next" icon="xm__icon--checked">下一步</xm-button>
+      <xm-button type="primary" @click="next" icon="xm__icon--refresh">下一步</xm-button>
     </div>
     <h4>网格和图标</h4>
     <xm-grids row="6">

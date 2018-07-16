@@ -1,6 +1,6 @@
 .xm_tag {
   display: inline-block;
-  line-height: 1.2;
+  line-height: 1.6rem;
   cursor: pointer;
   color: #1f2d3d;
   -webkit-appearance: none;
@@ -11,6 +11,9 @@
   margin: 0;
   border-radius: 4px;
   padding: 3px 8px;
+  .xm__icon--close{
+    vertical-align: middle;
+  }
   &.xm_tag.xm_tag--default {
     color: #495060;
     background: $background-color-base;

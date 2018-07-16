@@ -1,5 +1,5 @@
 <template>
-  <button class="xm__btn" @click="handleClick" :style="{backgroundColor: bgColor, color: color, 'border-color':borderColor}" :class="['xm__btn--'+type,{'is-plain': plain, 'is-round': round, 'is-long': long, 'xm__btn--block': block, 'no-radius': noRadius},iconClass]" :disabled="disabled">
+  <button class="xm__btn" @click="handleClick" :style="{backgroundColor: bgColor, color: color, 'border-color':borderColor}" :class="['xm__btn--'+type,{'is-plain': plain, 'is-round': round,'circle':circle, 'is-long': long, 'xm__btn--block': block, 'no-radius': noRadius},iconClass]" :disabled="disabled">
     <i :class="icon" v-if="icon"></i>
     <i class="xm__icon--loading" v-if="loading && !icon"></i>
     <slot></slot>
@@ -41,7 +41,11 @@ export default {
     block: Boolean,
     disabled: Boolean,
     plain: Boolean,
-    round: Boolean
+    round: Boolean,
+    circle:{
+      type:Boolean,
+      default:false
+    }
   },
   methods: { //绑定的方法
     handleClick(event) {

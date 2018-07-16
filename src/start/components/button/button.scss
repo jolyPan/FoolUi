@@ -21,7 +21,7 @@
   color: $btn-default-color;
   background: $btn-default-bg;
   border: $border-width-default $border-style-default $border-color-base;
-  @include border-radius;
+  @include border-radius(5px);
 
   &:hover,
   &:active {
@@ -37,7 +37,10 @@
   &.is-round {
     @include border-radius(20px);
   }
-
+  &.circle {
+    @include border-radius(100%);
+    padding: 10px;
+  }
   &.is-plain {
     color: $btn-plain-color;
     background: $btn-plain-bg;
@@ -76,7 +79,10 @@
   &.is-round {
     @include border-radius(20px);
   }
-
+  &.circle {
+    @include border-radius(100%);
+    padding: 10px;
+  }
   &.is-plain {
     color: $btn-plain-color;
     background: $btn-plain-bg;
@@ -115,7 +121,11 @@
   &.is-round {
     @include border-radius(20px);
   }
+  &.circle {
+    @include border-radius(100%);
+    padding: 10px;
 
+  }
   &.is-plain {
     color: $btn-plain-color;
     background: $btn-plain-bg;
@@ -154,7 +164,11 @@
   &.is-round {
     @include border-radius(20px);
   }
+  &.circle {
+    @include border-radius(100%);
+    padding: 10px;
 
+  }
   &.is-plain {
     color: $btn-plain-color;
     background: $btn-plain-bg;
@@ -193,7 +207,11 @@
   &.is-round {
     @include border-radius(20px);
   }
+  &.circle {
+    @include border-radius(100%);
+    padding: 10px;
 
+  }
   &.is-plain {
     color: $btn-plain-color;
     background: $btn-plain-bg;
