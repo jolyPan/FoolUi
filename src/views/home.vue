@@ -64,11 +64,16 @@
     <h4>slider滑块</h4>
     <div class="row">
       <div class="col-md-6">
-          <xm-slider :change="valueFun" :min="20" :max="80"></xm-slider>
+        <xm-slider :change="valueFun" :min="20" :max="80"></xm-slider>
       </div>
       <div class="col-md-6">
-          <xm-slider :change="valueFun" v-model="slider" :range="false"></xm-slider>
+        <xm-slider :change="valueFun" v-model="slider" :range="false"></xm-slider>
       </div>
+    </div>
+    <h4>步骤条</h4>
+    <xm-step :loading="loading" :step="step" :step-list="stepList"></xm-step>
+    <div class="row">
+      <xm-button type="primary" @click="next" icon="xm__icon--checked">下一步</xm-button>
     </div>
     <h4>网格和图标</h4>
     <xm-grids row="6">
@@ -283,10 +288,25 @@ export default {
       radio: null,
       checkbox: [],
       inputval: "",
-      slider: 20
+      slider: 20,
+      stepList: ['发起工单', '主管审批', '经理审批', '总监核查', '结束'],
+      step: 0,
+      loading:true
     };
   },
   methods: {
+    next() {
+      if(this.loading){
+        this.loading = false
+      }else{
+        this.loading = true
+        if (this.step >= 4) {
+          this.step = 0
+        } else {
+          this.step++
+        }
+      }
+    },
     btnClick() {
       this.$toast.text({
         content: "风波之"

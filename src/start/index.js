@@ -9,6 +9,7 @@ import Input from "./components/input/index";
 import Grid from "./components/grid/index";
 import Grids from "./components/grids/index";
 import Slider from "./components/slider/index"
+import Step from "./components/step/index";
 const components = {
   Button,
   Tag,
@@ -19,7 +20,8 @@ const components = {
   Input,
   Grid,
   Grids,
-  Slider
+  Slider,
+  Step
 };
 const install = function (Vue) {
   if (install.installed) return;
