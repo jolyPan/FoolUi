@@ -82,7 +82,7 @@
     </div>
     <h4>网格和图标</h4>
     <xm-grids row="6">
-      <xm-grid href="https://github.com/monw3c/xmui">
+      <xm-grid href="https://github.com/monw3c/foolui">
         <span slot="icon" class="xm__icon--phone"></span>
         <span slot="text">phone</span>
       </xm-grid>

@@ -3,7 +3,7 @@ const merge = require('webpack-merge')
 const config = require('../config')
 const baseWebpackConfig = require('./package.config')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const extractScss = new ExtractTextPlugin('/xmui.min.css')
+const extractScss = new ExtractTextPlugin('/foolui.min.css')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = merge(baseWebpackConfig, {
@@ -47,7 +47,7 @@ module.exports = merge(baseWebpackConfig, {
         }),
         new CopyWebpackPlugin([
             // {output}/file.txt
-            { from: `./src/comps`,to:`./comps`}
+            { from: `./src/start`,to:`./start`}
         ]),
     ]
 })

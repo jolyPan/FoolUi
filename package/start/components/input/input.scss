@@ -1,0 +1,54 @@
+.xm__form--input {
+  display: inline-block;
+  position: relative;
+  border-radius: 4px;
+  background-image: none;
+  background-clip: padding-box;
+  border: 1px solid #c2cfd6;
+  box-sizing: border-box;
+  &:hover {
+    border: 1px solid $input-hover-color;
+  }
+  &:focus { 
+    border: 1px solid $input-focus-color;
+  }
+  &[disabled="disabled"] {
+    border-color: $btn-disable-border;
+    background-color: $btn-disable-bg;
+    color: $btn-disable-color;
+  }
+  .xm__form--control {
+    display: inline-block;
+    height: 3rem;
+    padding: 0.5rem 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25;
+    color: #3e515b;
+    background-color: #fff;
+    background-image: none;
+    background-clip: padding-box;
+    border: none;
+    &[disabled="disabled"] {
+      background-color: $btn-disable-bg;
+      color: $btn-disable-color;
+    }
+  }
+  .xm__icon--close{
+    position: absolute;
+    top: 50%;
+    right: .5rem;
+    transform: translate(0,-50%);
+  }
+  .xm__icon--after{
+    vertical-align: middle;
+    display: inline-block;
+    padding-right: .5rem;
+    color: #606266;
+  }
+  .xm__icon--before{
+    vertical-align: middle;
+    display: inline-block;
+    padding-left: .5rem;
+    color: #606266;
+  }
+}

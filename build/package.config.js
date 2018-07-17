@@ -4,7 +4,7 @@ const webpack = require('webpack');
 module.exports = {
     //修改组件库的index.js为入口文件
     entry: {
-        'xmui': './src/start/index.js'
+        'foolui': './src/start/index.js'
     },
     // 这里的package不是组件目录，是npm run package:prod最终生成的压缩目录
     output: {
@@ -12,7 +12,7 @@ module.exports = {
         path: path.resolve(__dirname, '../package'),
         //打包后的根目录
         publicPath: '/package/',
-        library: 'xmui',
+        library: 'foolui',
         libraryTarget: 'umd',
         umdNamedDefine: true
     },

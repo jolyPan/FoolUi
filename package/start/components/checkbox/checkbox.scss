@@ -1,0 +1,65 @@
+@mixin exactness($color) {
+  box-sizing: content-box;
+  content: "";
+  border: 1px solid $color;
+  border-left: 0;
+  border-top: 0;
+  height: 7px;
+  left: 4px;
+  position: absolute;
+  top: 1px;
+  transform: rotate(45deg);
+  width: 3px;
+  transition: transform 0.15s ease-in 0.05s;
+  transform-origin: center;
+}
+.xm__checkbox {
+  position: relative;
+  input[type="checkbox"] {
+    opacity: 0;
+    outline: none;
+    position: absolute;
+    margin: 0;
+    width: 0;
+    height: 0;
+    z-index: -1;
+  }
+  .xm__checkbox--input {
+    white-space: nowrap;
+    cursor: pointer;
+    outline: none;
+    display: inline-block;
+    line-height: 1;
+    position: relative;
+    vertical-align: middle;
+    .xm__checkbox--inner {
+      display: inline-block;
+      position: relative;
+      border: 1px solid #dcdfe6;
+      border-radius: 2px;
+      box-sizing: border-box;
+      width: 14px;
+      height: 14px;
+      background-color: #fff;
+      z-index: 1;
+      &::after {
+        @include exactness(#fff);
+      }
+    }
+    .is-checked {
+      background-color: $primary-color;
+    }
+  }
+  &.disabled {
+    .xm__checkbox--inner {
+      background-color: $btn-disable-bg;
+      border: 1px solid $btn-disable-border;
+      color: $btn-disable-color;
+    }
+    .xm__checkbox--inner.is-checked {
+      &::after {
+        @include exactness($btn-disable-color);
+      }
+    }
+  }
+}

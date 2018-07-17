@@ -3,8 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import xmui from './start/index'
-Vue.use(xmui)
+import foolui from './start/index'
+Vue.use(foolui)
 Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({

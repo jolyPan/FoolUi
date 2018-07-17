@@ -1,0 +1,47 @@
+.xm_slider {
+  width: 100%;
+  position: relative;
+  height: 2rem;
+  .xm_left-btn,
+  .xm_right-btn {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    transform: translate(0,-50%);
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: #fff;
+    border-radius: 50%;
+    border: .2rem solid #409eff;
+  }
+  .xm_propo {
+    width: 0%;
+    height: 0.5rem;
+    background: #409eff;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    left: 0;
+    z-index: 2;
+  }
+  .xm_propo-bg {
+    background: #e4e7ed;
+    border-radius: 0.16rem;
+    height: 0.5rem;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    left: 0;
+    z-index: 1;
+  }
+  .xm_active {
+    &:before {
+      border-bottom-color: #ff8c30;
+    }
+    &:after {
+      background: #ff8c30;
+    }
+  }
+}

@@ -1,10 +1,10 @@
 {
-  "name": "project",
-  "version": "1.0.0",
-  "description": "A Vue.js project",
+  "name": "fool-ui",
+  "version": "1.0.3",
+  "description": "基于vue2.x，可复用UI组件",
   "author": "joly",
-  "private": true,
-  "main": "package/xmui.min.js",
+  "private": false,
+  "main": "package/foolui.min.js",
   "注释": "当从npm安装包后，告诉node_modules查找引用的路径",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -12,7 +12,7 @@
     "build": "node build/build.js",
     "package:dev": "webpack --config build/package.dev.config.js",
     "package:prod": "webpack --config build/package.prod.config.js",
-    "package": "npm run package:prod && npm publish && npm run build"
+    "package": "npm run package:prod  && npm publish && npm run build"
   },
   "dependencies": {
     "vue": "^2.5.2",
