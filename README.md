@@ -2,7 +2,7 @@
 
 # FoolUi
 
-> 基于vue2.x，可复用UI组件
+> 基于vue2.x，可复用UI组件 [在线示例](https://jolypan.github.io/FoolUi/dist/#/)
 
 ## 安装
 
@@ -40,7 +40,3 @@ components: {
     ...
 }
 ``` 
-
-## 查看示例  
-
-[在线示例](https://jolypan.github.io/FoolUi/dist/#/) 
