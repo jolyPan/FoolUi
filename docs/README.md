@@ -4,12 +4,12 @@
 
 > 基于vue2.x，可复用UI组件
 
-## Install
+## 安装
 
 ``` bash
 npm install fool-ui
 ```
-## Quick Start
+## 快速开始
 ``` bash
 import Vue from 'vue'
 import Fool from 'fool-ui'
@@ -17,9 +17,9 @@ import 'fool-ui/package/foolui.min.css'
  
 Vue.use(Fool)
 ```
-## Browser Support
+## 浏览器支持
 ``` bash
-- Modern browsers and Internet Explorer 10+.
+- 现代浏览器和IE10+
 ```
 
 ## 按需引入 -- 在 入口文件 main.js 或 组件内 中如下配置：
@@ -40,7 +40,6 @@ components: {
     ...
 }
 ``` 
-
 ## 查看示例  
 
 [在线示例](https://jolypan.github.io/FoolUi/dist/#/) 
