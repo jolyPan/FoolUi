@@ -103,6 +103,9 @@
     <xm-badge isDot>
       <xm-button plain>关注</xm-button>
     </xm-badge>
+    <xm-badge bgColor="#fc0" color="#e0439a" value="自定义">
+      <xm-button plain>自定义颜色</xm-button>
+    </xm-badge>
     <xm-badge style="margin-left:2rem;" value="new">
     </xm-badge>
     <xm-badge style="margin-left:2rem;" value="hot">

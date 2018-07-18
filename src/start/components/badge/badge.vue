@@ -3,10 +3,13 @@
         marginRight: $refs.badge&& ($refs.badge.offsetWidth + 'px'),
     }">
         <slot></slot>
-        <span ref="badge" class="xm__badge--content" :class="[
+        <span v-show="!hidden" ref="badge" class="xm__badge--content" :class="[
             isDot && 'is-dot', 
             $slots.default && 'is-fixed'
-        ]">{{content}}</span>
+        ]" :style="{
+            backgroundColor:bgColor,
+            color:color
+        }">{{content}}</span>
     </div>
 </template>
 
@@ -26,6 +29,10 @@ export default {
         color: {
             type: String,
             default: ''
+        },
+        hidden:{
+            type: Boolean,
+            default: false
         },
         borderColor: {
             type: String,
