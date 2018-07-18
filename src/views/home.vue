@@ -22,7 +22,7 @@
     <xm-button circle type="primary" @click="btnClick" icon="xm__icon--refresh"></xm-button>
     <xm-button circle type="success" icon="xm__icon--checked"></xm-button>
     <xm-button circle @click="btnClick" icon="xm__icon--search"></xm-button>
-    <xm-button circle type="error"  icon="xm__icon--delete"></xm-button>
+    <xm-button circle type="error" icon="xm__icon--delete"></xm-button>
     <xm-button circle type="warning" icon="xm__icon--lock"></xm-button>
     <!-- <h4>long按钮</h4> -->
     <br/>
@@ -90,207 +90,227 @@
     <div class="row">
       <xm-button type="primary" @click="next" icon="xm__icon--refresh">下一步</xm-button>
     </div>
+    <h4>标记</h4>
+    <xm-badge :value="5">
+      <xm-button plain>评论</xm-button>
+    </xm-badge>
+    <xm-badge :value="10">
+      <xm-button plain>回复</xm-button>
+    </xm-badge>
+    <xm-badge :value="100" :max="99">
+      <xm-button plain>点赞</xm-button>
+    </xm-badge>
+    <xm-badge isDot>
+      <xm-button plain>关注</xm-button>
+    </xm-badge>
+    <xm-badge style="margin-left:2rem;" value="new">
+    </xm-badge>
+    <xm-badge style="margin-left:2rem;" value="hot">
+    </xm-badge>
+    <div>
+      <!-- <xm-carousel></xm-carousel> -->
+    </div>
     <h4>网格和图标</h4>
-    <xm-grids row="6">
-      <xm-grid href="https://github.com/monw3c/foolui">
-        <span slot="icon" class="xm__icon--phone"></span>
-        <span slot="text">phone</span>
-      </xm-grid>
-      <xm-grid @click="gridClick">
-        <span slot="icon" class="xm__icon--lbs"></span>
-        <span slot="text">lbs</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--qrcode"></span>
-        <span slot="text">qrcode</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--date"></span>
-        <span slot="text">date</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--nochecked"></span>
-        <span slot="text">nochecked</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--checked"></span>
-        <span slot="text">checked</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--radio"></span>
-        <span slot="text">radio</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--search"></span>
-        <span slot="text">search</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--close-outline"></span>
-        <span slot="text">close-outline</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--close"></span>
-        <span slot="text">close</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--homefill"></span>
-        <span slot="text">homefill</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--home"></span>
-        <span slot="text">home</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--myfill"></span>
-        <span slot="text">myfill</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--my"></span>
-        <span slot="text">my</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--userfill"></span>
-        <span slot="text">userfill</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--user"></span>
-        <span slot="text">user</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--contact"></span>
-        <span slot="text">contact</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--link"></span>
-        <span slot="text">link</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--unlock"></span>
-        <span slot="text">unlock</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--lock"></span>
-        <span slot="text">lock</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--likefill"></span>
-        <span slot="text">likefill</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--like"></span>
-        <span slot="text">like</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--reduce-outline"></span>
-        <span slot="text">reduce-outline</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--reduce"></span>
-        <span slot="text">reduce</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--add-outline"></span>
-        <span slot="text">add-outline</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--add"></span>
-        <span slot="text">add</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--edit"></span>
-        <span slot="text">edit</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--delete"></span>
-        <span slot="text">delete</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--photodel"></span>
-        <span slot="text">photodel</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--photo"></span>
-        <span slot="text">photo</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--msgfill"></span>
-        <span slot="text">msgfill</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--msg"></span>
-        <span slot="text">msg</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--menumore"></span>
-        <span slot="text">menumore</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--menu"></span>
-        <span slot="text">menu</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--tips"></span>
-        <span slot="text">tips</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--refresh"></span>
-        <span slot="text">refresh</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--share"></span>
-        <span slot="text">share</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--totop"></span>
-        <span slot="text">totop</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--attachment"></span>
-        <span slot="text">attachment</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--emoji"></span>
-        <span slot="text">emoji</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--scan"></span>
-        <span slot="text">scan</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--mall"></span>
-        <span slot="text">mall</span>
-      </xm-grid>
+      <xm-grids row="6">
+        <xm-grid href="https://github.com/monw3c/foolui">
+          <span slot="icon" class="xm__icon--phone"></span>
+          <span slot="text">phone</span>
+        </xm-grid>
+        <xm-grid @click="gridClick">
+          <span slot="icon" class="xm__icon--lbs"></span>
+          <span slot="text">lbs</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--qrcode"></span>
+          <span slot="text">qrcode</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--date"></span>
+          <span slot="text">date</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--nochecked"></span>
+          <span slot="text">nochecked</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--checked"></span>
+          <span slot="text">checked</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--radio"></span>
+          <span slot="text">radio</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--search"></span>
+          <span slot="text">search</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--close-outline"></span>
+          <span slot="text">close-outline</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--close"></span>
+          <span slot="text">close</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--homefill"></span>
+          <span slot="text">homefill</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--home"></span>
+          <span slot="text">home</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--myfill"></span>
+          <span slot="text">myfill</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--my"></span>
+          <span slot="text">my</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--userfill"></span>
+          <span slot="text">userfill</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--user"></span>
+          <span slot="text">user</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--contact"></span>
+          <span slot="text">contact</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--link"></span>
+          <span slot="text">link</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--unlock"></span>
+          <span slot="text">unlock</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--lock"></span>
+          <span slot="text">lock</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--likefill"></span>
+          <span slot="text">likefill</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--like"></span>
+          <span slot="text">like</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--reduce-outline"></span>
+          <span slot="text">reduce-outline</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--reduce"></span>
+          <span slot="text">reduce</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--add-outline"></span>
+          <span slot="text">add-outline</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--add"></span>
+          <span slot="text">add</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--edit"></span>
+          <span slot="text">edit</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--delete"></span>
+          <span slot="text">delete</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--photodel"></span>
+          <span slot="text">photodel</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--photo"></span>
+          <span slot="text">photo</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--msgfill"></span>
+          <span slot="text">msgfill</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--msg"></span>
+          <span slot="text">msg</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--menumore"></span>
+          <span slot="text">menumore</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--menu"></span>
+          <span slot="text">menu</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--tips"></span>
+          <span slot="text">tips</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--refresh"></span>
+          <span slot="text">refresh</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--share"></span>
+          <span slot="text">share</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--totop"></span>
+          <span slot="text">totop</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--attachment"></span>
+          <span slot="text">attachment</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--emoji"></span>
+          <span slot="text">emoji</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--scan"></span>
+          <span slot="text">scan</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--mall"></span>
+          <span slot="text">mall</span>
+        </xm-grid>
 
-      <xm-grid>
-        <span slot="icon" class="xm__icon--filter"></span>
-        <span slot="text">filter</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--sort"></span>
-        <span slot="text">sort</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--loading"></span>
-        <span slot="text">loading</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--left"></span>
-        <span slot="text">left</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--right"></span>
-        <span slot="text">right</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--up"></span>
-        <span slot="text">up</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--down"></span>
-        <span slot="text">down</span>
-      </xm-grid>
-    </xm-grids>
-  </div>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--filter"></span>
+          <span slot="text">filter</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--sort"></span>
+          <span slot="text">sort</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--loading"></span>
+          <span slot="text">loading</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--left"></span>
+          <span slot="text">left</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--right"></span>
+          <span slot="text">right</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--up"></span>
+          <span slot="text">up</span>
+        </xm-grid>
+        <xm-grid>
+          <span slot="icon" class="xm__icon--down"></span>
+          <span slot="text">down</span>
+        </xm-grid>
+      </xm-grids>
+    </div>
 </template>
 
 <script>
@@ -305,15 +325,15 @@ export default {
       inputval: "",
       slider: 20,
       stepList: ['步骤一', '步骤二', '步骤三', '步骤四', '步骤五'],
-      step: 0,
-      loading:true
+      step: 2,
+      loading: true
     };
   },
   methods: {
     next() {
-      if(this.loading){
+      if (this.loading) {
         this.loading = false
-      }else{
+      } else {
         this.loading = true
         if (this.step >= 4) {
           this.step = 0

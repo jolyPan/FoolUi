@@ -10,7 +10,12 @@ import Grid from "./components/grid/index";
 import Grids from "./components/grids/index";
 import Slider from "./components/slider/index"
 import Step from "./components/step/index";
+import Carousel from "./components/carousel/index";
+import Badge from "./components/badge/index";
 const components = {
+  Carousel,
+  CarouselItem:Carousel.CarouselItem,
+  Badge,
   Button,
   Tag,
   ButtonGroup: Button.group,
