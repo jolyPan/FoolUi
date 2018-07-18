@@ -191,9 +191,9 @@ export default {
     const end = e => {
       this.isPressDown = false;
     };
-    mySlider.addEventListener("touchmove", move);
+    mySlider.addEventListener("touchmove", move,{passive:false});
     mySlider.addEventListener("mousemove", move);
-    document.addEventListener("touchmove", move);
+    document.addEventListener("touchmove", move,{passive:false});
     document.addEventListener("mousemove", move);
 
     mySlider.addEventListener("touchstart", start);
