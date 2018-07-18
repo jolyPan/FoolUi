@@ -193,12 +193,16 @@ export default {
     };
     mySlider.addEventListener("touchmove", move);
     mySlider.addEventListener("mousemove", move);
+    document.addEventListener("touchmove", move);
+    document.addEventListener("mousemove", move);
 
     mySlider.addEventListener("touchstart", start);
     mySlider.addEventListener("mousedown", start);
 
     mySlider.addEventListener("touchend", end);
     mySlider.addEventListener("mouseup", end);
+    document.addEventListener("touchend", end);
+    document.addEventListener("mouseup", end);
     // mySlider.addEventListener("mouseout", end);
     this.myDefault();
   },
