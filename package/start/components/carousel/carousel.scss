@@ -1,0 +1,78 @@
+.xm__box {
+  display: inline-block;
+  //   padding: 8px;
+  //   border: 3px solid #990000;
+  //   border-radius: 10px;
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  ul {
+    list-style: none;
+  }
+  .xm__inner {
+    position: relative;
+    overflow: hidden;
+    .xm__imglist {
+      width: 700%;
+      position: absolute;
+      left: 0;
+      li {
+        float: left;
+        overflow: hidden;
+        background-color: #98a9bf;
+      }
+    }
+    .xm__list {
+      position: absolute;
+      bottom: 0.8rem;
+      left: 50%;
+      transform: translate(-50%, 0);
+      & i {
+        display: inline-block;
+        width: 1.6rem;
+        height: 0.2rem;
+        margin: 0 0.2rem;
+        cursor: pointer;
+        line-height: 6px;
+        vertical-align: middle;
+        transition: all 0.3s linear 0s;
+        -webkit-transition: all 0.3s linear 0s;
+        background-color: #747581;
+      }
+      & i:last-child {
+        margin-right: 0;
+      }
+      & i.current {
+        background: #fff;
+        color: #fff;
+      }
+    }
+    .xm__arrow {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      margin-top: -30px;
+      display: none;
+    }
+
+    .xm__arrow--left,
+    .xm__arrow--right {
+      width: 30px;
+      height: 60px;
+      position: absolute;
+      font: 20px/60px "consolas";
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.3);
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .xm__arrow--right {
+      right: 0;
+    }
+    .xm__arrow--left {
+      left: 0;
+    }
+  }
+}

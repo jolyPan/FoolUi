@@ -1,6 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
-
+function resolve (dir) {
+return path.join(__dirname, '..', dir)
+}
 module.exports = {
     //修改组件库的index.js为入口文件
     entry: {
@@ -25,7 +27,12 @@ module.exports = {
         }
     },
     resolve: {
-        extensions: ['.js', '.vue']
+        extensions: ['.js', '.vue'],
+        alias: {
+        'vue$': 'vue/dist/vue.esm.js',
+        '@': resolve('src'),
+        'components': resolve('src/start/components'),
+        }
     },
     module: {
         loaders: [{

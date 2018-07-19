@@ -110,8 +110,15 @@
     </xm-badge>
     <xm-badge style="margin-left:2rem;" value="hot">
     </xm-badge>
+    <h4>走马灯</h4>
     <div>
-      <!-- <xm-carousel></xm-carousel> -->
+      <xm-carousel :height="230" :autoplay="autoplay" :initialIndex="0" @change="carouselChange">
+          <xm-carousel-item v-for="(item,index) in carousel" :key="index">
+            <a href="#"><img :src="item" alt=""></a>
+          </xm-carousel-item>
+      </xm-carousel>
+      <br/>
+      <xm-button type="primary" @click="closeAutoplay">切换自动播放</xm-button>
     </div>
     <h4>网格和图标</h4>
       <xm-grids row="6">
@@ -321,6 +328,7 @@ export default {
   name: "",
   data() {
     return {
+      carousel:['/static/images/timg0.jpeg','/static/images/timg1.jpeg','/static/images/timg2.jpeg','/static/images/timg3.jpeg','/static/images/timg4.jpeg','/static/images/timg5.jpeg'],
       msg: `Fool-ui - 基于vue2.x，可复用UI组件`,
       closeFlag: true,
       radio: null,
@@ -329,10 +337,17 @@ export default {
       slider: 20,
       stepList: ['步骤一', '步骤二', '步骤三', '步骤四', '步骤五'],
       step: 2,
-      loading: true
+      loading: true,
+      autoplay:false
     };
   },
   methods: {
+    carouselChange(index){
+      console.log(index)
+    },
+    closeAutoplay(){
+      this.autoplay = !this.autoplay 
+    },
     next() {
       if (this.loading) {
         this.loading = false
