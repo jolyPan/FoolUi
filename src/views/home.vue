@@ -324,7 +324,7 @@
 </template>
 
 <script>
-const  baseUrl = process.env.NODE_ENV === 'development' ? '/static/' : '/dist/static/'
+const  baseUrl = process.env.NODE_ENV === 'development' ? '/static/' : '/FoolUi/dist/static/'
 export default {
   name: "",
   data() {
