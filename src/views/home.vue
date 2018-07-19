@@ -324,11 +324,12 @@
 </template>
 
 <script>
+const  baseUrl = process.env.NODE_ENV === 'development' ? '/static/' : '/dist/static/'
 export default {
   name: "",
   data() {
     return {
-      carousel:['/static/images/timg0.jpeg','/static/images/timg1.jpeg','/static/images/timg2.jpeg','/static/images/timg3.jpeg','/static/images/timg4.jpeg','/static/images/timg5.jpeg'],
+      carousel:[baseUrl+'images/timg0.jpeg',baseUrl + 'images/timg1.jpeg',baseUrl + 'images/timg2.jpeg',baseUrl + 'images/timg3.jpeg',baseUrl + 'images/timg4.jpeg',baseUrl + 'images/timg5.jpeg'],
       msg: `Fool-ui - 基于vue2.x，可复用UI组件`,
       closeFlag: true,
       radio: null,
