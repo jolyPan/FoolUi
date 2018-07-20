@@ -32,7 +32,6 @@ const components = {
   Step
 };
 const install = function(Vue) {
-  if (install.installed) return;
   //   components.map(component => Vue.component(component.name, component))
   Object.keys(components).forEach(key => {
     if (components[key].name) {
