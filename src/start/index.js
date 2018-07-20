@@ -8,13 +8,16 @@ import Checkbox from "./components/checkbox/index";
 import Input from "./components/input/index";
 import Grid from "./components/grid/index";
 import Grids from "./components/grids/index";
-import Slider from "./components/slider/index"
+import Slider from "./components/slider/index";
 import Step from "./components/step/index";
 import Carousel from "./components/carousel/index";
 import Badge from "./components/badge/index";
+import Tab from "./components/tab/index";
 const components = {
   Carousel,
-  CarouselItem:Carousel.CarouselItem,
+  Tab,
+  TabItem: Tab.TabItem,
+  CarouselItem: Carousel.CarouselItem,
   Badge,
   Button,
   Tag,
@@ -28,7 +31,7 @@ const components = {
   Slider,
   Step
 };
-const install = function (Vue) {
+const install = function(Vue) {
   if (install.installed) return;
   //   components.map(component => Vue.component(component.name, component))
   Object.keys(components).forEach(key => {

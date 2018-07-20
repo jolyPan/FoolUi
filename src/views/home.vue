@@ -9,14 +9,12 @@
     <xm-button type="error" icon="xm__icon--likefill"></xm-button>
     <xm-button type="warning" disabled>禁止</xm-button>
     <xm-button plain>简约</xm-button>
-    <!-- <h4>无圆角按钮</h4> -->
     <br/>
     <br/>
     <xm-button loading no-radius type="primary">loading状态</xm-button>
     <xm-button no-radius bg-color="#f56c6c" color="#fff" border-color="#f56c6c">自定义颜色</xm-button>
     <xm-button no-radius>无圆角</xm-button>
     <xm-button no-radius type="text" icon="xm__icon--checked">文字</xm-button>
-    <!-- <h4>圆形按钮</h4> -->
     <br/>
     <br/>
     <xm-button circle type="primary" @click="btnClick" icon="xm__icon--refresh"></xm-button>
@@ -24,13 +22,11 @@
     <xm-button circle @click="btnClick" icon="xm__icon--search"></xm-button>
     <xm-button circle type="error" icon="xm__icon--delete"></xm-button>
     <xm-button circle type="warning" icon="xm__icon--lock"></xm-button>
-    <!-- <h4>long按钮</h4> -->
     <br/>
     <br/>
     <xm-button round long>100%宽圆角</xm-button>
     <br/>
     <br/>
-    <!-- <h4>组合按钮</h4> -->
     <xm-button-group class="btn__group">
       <xm-button type="warning">警告</xm-button>
       <xm-button type="primary" @click="btnClick" icon="xm__icon--checked">主要</xm-button>
@@ -120,6 +116,10 @@
       <br/>
       <xm-button type="primary" @click="closeAutoplay">切换自动播放</xm-button>
     </div>
+    <!-- <h4>选项卡</h4> -->
+    <!-- <xm-tab :line-width="2" active-color="#fc378c">
+        <xm-tab-item :checked="demo2 === item" v-for="(item,index) in list2" @click="demo2 = item" :key="index"><h1>{{item}}</h1></xm-tab-item>
+    </xm-tab> -->
     <h4>网格和图标</h4>
       <xm-grids row="6">
         <xm-grid href="https://github.com/monw3c/foolui">
@@ -339,7 +339,9 @@ export default {
       stepList: ['步骤一', '步骤二', '步骤三', '步骤四', '步骤五'],
       step: 2,
       loading: true,
-      autoplay:false
+      autoplay:false,
+      demo2: '美食',
+      list2: ['精选', '美食', '电影', '酒店', '外卖']
     };
   },
   methods: {

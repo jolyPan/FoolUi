@@ -20,9 +20,9 @@
 </template>
 
 <script>
-import mixin from 'components/mixin'
+import {Mixin} from 'components/mixin'
 export default {
-    mixins:[mixin],
+    mixins:[Mixin],
     name:'xm-carousel',
     props:{
         height:{
