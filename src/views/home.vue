@@ -120,7 +120,7 @@
     <!-- <xm-tab :line-width="2" active-color="#fc378c">
         <xm-tab-item :checked="demo2 === item" v-for="(item,index) in list2" @click="demo2 = item" :key="index"><h1>{{item}}</h1></xm-tab-item>
     </xm-tab> -->
-    <h4>网格和图标</h4>
+    <h4>栅格和图标</h4>
       <xm-grids row="6">
         <xm-grid href="https://github.com/monw3c/foolui">
           <span slot="icon" class="xm__icon--phone"></span>
