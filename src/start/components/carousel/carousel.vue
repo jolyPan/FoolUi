@@ -1,18 +1,18 @@
 <template>
-    <div class="xm__box" ref="xm__box">
-        <div class="xm__inner" ref="xm__inner" :style="{width:imgWidth + 'px',height:height+'px'}">
-            <ul class="xm__imglist" ref="xm__imglist">
+    <div class="fool__box" ref="fool__box">
+        <div class="fool__inner" ref="fool__inner" :style="{width:imgWidth + 'px',height:height+'px'}">
+            <ul class="fool__imglist" ref="fool__imglist">
                 <slot></slot>
             </ul>
-            <div class="xm__list">
+            <div class="fool__list">
                 <i @click="carouselButton" v-for="(item,index) in lis" :index="index" :key="index"></i>
             </div>
-            <div class="xm__arrow" ref="xm__arrow">
-                <span @click="arrowLeft" class="xm__arrow--left">
-                    <span slot="icon" class="xm__icon--left"></span>
+            <div class="fool__arrow" ref="fool__arrow">
+                <span @click="arrowLeft" class="fool__arrow--left">
+                    <span slot="icon" class="fool__icon--left"></span>
                 </span>
-                <span @click="arrowRight" class="xm__arrow--right">
-                    <span slot="icon" class="xm__icon--right"></span>
+                <span @click="arrowRight" class="fool__arrow--right">
+                    <span slot="icon" class="fool__icon--right"></span>
                 </span>
             </div>
         </div>
@@ -23,7 +23,7 @@
 import {Mixin} from 'components/mixin'
 export default {
     mixins:[Mixin],
-    name:'xm-carousel',
+    name:'f-carousel',
     props:{
         height:{
             type:Number,
@@ -232,10 +232,10 @@ export default {
     },
     mounted() {
         // 找对象
-        var box = this.$refs.xm__box;
-        this.ul = this.$refs.xm__imglist;
+        var box = this.$refs.fool__box;
+        this.ul = this.$refs.fool__imglist;
         this.lis = this.ul.children;
-        var arrow = this.$refs.xm__arrow;
+        var arrow = this.$refs.fool__arrow;
         var arrowLeft = arrow.children[0];
         var arrowRight = arrow.children[1];
         //鼠标经过盒子，箭头显示
@@ -264,7 +264,7 @@ export default {
         }
         this.setItemSize()
         this.$nextTick(()=>{
-            this.icons = this.$refs.xm__inner.getElementsByTagName("i");
+            this.icons = this.$refs.fool__inner.getElementsByTagName("i");
             this.icons[this.initialIndex].click()
         })
     },

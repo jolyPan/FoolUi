@@ -1,4 +1,4 @@
-.xm__box {
+.fool__box {
   display: inline-block;
   //   padding: 8px;
   //   border: 3px solid #990000;
@@ -10,10 +10,10 @@
   ul {
     list-style: none;
   }
-  .xm__inner {
+  .fool__inner {
     position: relative;
     overflow: hidden;
-    .xm__imglist {
+    .fool__imglist {
       width: 700%;
       position: absolute;
       left: 0;
@@ -23,7 +23,7 @@
         background-color: #98a9bf;
       }
     }
-    .xm__list {
+    .fool__list {
       position: absolute;
       bottom: 0.8rem;
       left: 50%;
@@ -48,7 +48,7 @@
         color: #fff;
       }
     }
-    .xm__arrow {
+    .fool__arrow {
       position: absolute;
       width: 100%;
       top: 50%;
@@ -56,8 +56,8 @@
       display: none;
     }
 
-    .xm__arrow--left,
-    .xm__arrow--right {
+    .fool__arrow--left,
+    .fool__arrow--right {
       width: 30px;
       height: 60px;
       position: absolute;
@@ -68,10 +68,10 @@
       cursor: pointer;
     }
 
-    .xm__arrow--right {
+    .fool__arrow--right {
       right: 0;
     }
-    .xm__arrow--left {
+    .fool__arrow--left {
       left: 0;
     }
   }

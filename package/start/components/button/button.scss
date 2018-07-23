@@ -1,4 +1,4 @@
-.xm__btn {
+.fool__btn {
   display: inline-block;
   line-height: 1;
   cursor: pointer;
@@ -17,7 +17,7 @@
   position: relative;
 }
 
-.xm__btn--default {
+.fool__btn--default {
   color: $btn-default-color;
   background: $btn-default-bg;
   border: $border-width-default $border-style-default $border-color-base;
@@ -56,8 +56,8 @@
   }
 }
 
-.xm__btn--primary {
-  @extend .xm__btn--default;
+.fool__btn--primary {
+  @extend .fool__btn--default;
   color: $btn-primary-color;
   background: $btn-primary-bg;
   border: $border-width-default $border-style-default $btn-primary-bg;
@@ -98,8 +98,8 @@
   }
 }
 
-.xm__btn--success {
-  @extend .xm__btn--default;
+.fool__btn--success {
+  @extend .fool__btn--default;
   color: $btn-success-color;
   background: $btn-success-bg;
   border: $border-width-default $border-style-default $btn-success-bg;
@@ -141,8 +141,8 @@
   }
 }
 
-.xm__btn--warning {
-  @extend .xm__btn--default;
+.fool__btn--warning {
+  @extend .fool__btn--default;
   color: $btn-warning-color;
   background: $btn-warning-bg;
   border: $border-width-default $border-style-default $btn-warning-bg;
@@ -184,8 +184,8 @@
   }
 }
 
-.xm__btn--error {
-  @extend .xm__btn--default;
+.fool__btn--error {
+  @extend .fool__btn--default;
   color: $btn-error-color;
   background: $btn-error-bg;
   border: $border-width-default $border-style-default $btn-error-bg;
@@ -227,8 +227,8 @@
   }
 }
 
-.xm__btn--text {
-  @extend .xm__btn--default;
+.fool__btn--text {
+  @extend .fool__btn--default;
   color: $btn-text-color;
   background: $btn-text-bg;
   border: none;
@@ -256,11 +256,11 @@
   }
 }
 
-.xm__btn--block {
+.fool__btn--block {
   display: block;
 }
 
-.xm__btn--group {
+.fool__btn--group {
   position: relative;
   vertical-align: middle;
   display: flex;
@@ -286,6 +286,6 @@
   }
 }
 
-.xm__hasIconBtn {
+.fool__hasIconBtn {
   padding: 11px 20px;
 }

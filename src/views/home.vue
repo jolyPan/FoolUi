@@ -4,322 +4,322 @@
     <h2>基础组件</h2>
     <h3>按钮</h3>
     <!-- <h4>圆角按钮</h4> -->
-    <xm-button>普通</xm-button>
-    <xm-button type="primary" @click="btnClick" icon="xm__icon--refresh">主要</xm-button>
-    <xm-button type="error" icon="xm__icon--likefill"></xm-button>
-    <xm-button type="warning" disabled>禁止</xm-button>
-    <xm-button plain>简约</xm-button>
+    <f-button>普通</f-button>
+    <f-button type="primary" @click="btnClick" icon="fool__icon--refresh">主要</f-button>
+    <f-button type="error" icon="fool__icon--likefill"></f-button>
+    <f-button type="warning" disabled>禁止</f-button>
+    <f-button plain>简约</f-button>
     <br/>
     <br/>
-    <xm-button loading no-radius type="primary">loading状态</xm-button>
-    <xm-button no-radius bg-color="#f56c6c" color="#fff" border-color="#f56c6c">自定义颜色</xm-button>
-    <xm-button no-radius>无圆角</xm-button>
-    <xm-button no-radius type="text" icon="xm__icon--checked">文字</xm-button>
+    <f-button loading no-radius type="primary">loading状态</f-button>
+    <f-button no-radius bg-color="#f56c6c" color="#fff" border-color="#f56c6c">自定义颜色</f-button>
+    <f-button no-radius>无圆角</f-button>
+    <f-button no-radius type="text" icon="fool__icon--checked">文字</f-button>
     <br/>
     <br/>
-    <xm-button circle type="primary" @click="btnClick" icon="xm__icon--refresh"></xm-button>
-    <xm-button circle type="success" icon="xm__icon--checked"></xm-button>
-    <xm-button circle @click="btnClick" icon="xm__icon--search"></xm-button>
-    <xm-button circle type="error" icon="xm__icon--delete"></xm-button>
-    <xm-button circle type="warning" icon="xm__icon--lock"></xm-button>
+    <f-button circle type="primary" @click="btnClick" icon="fool__icon--refresh"></f-button>
+    <f-button circle type="success" icon="fool__icon--checked"></f-button>
+    <f-button circle @click="btnClick" icon="fool__icon--search"></f-button>
+    <f-button circle type="error" icon="fool__icon--delete"></f-button>
+    <f-button circle type="warning" icon="fool__icon--lock"></f-button>
     <br/>
     <br/>
-    <xm-button round long>100%宽圆角</xm-button>
+    <f-button round long>100%宽圆角</f-button>
     <br/>
     <br/>
-    <xm-button-group class="btn__group">
-      <xm-button type="warning">警告</xm-button>
-      <xm-button type="primary" @click="btnClick" icon="xm__icon--checked">主要</xm-button>
-      <xm-button type="success" icon="xm__icon--loading">成功</xm-button>
-    </xm-button-group>
+    <f-button-group class="btn__group">
+      <f-button type="warning">警告</f-button>
+      <f-button type="primary" @click="btnClick" icon="fool__icon--checked">主要</f-button>
+      <f-button type="success" icon="fool__icon--loading">成功</f-button>
+    </f-button-group>
     <h3>单选按钮</h3>
-    <xm-radio v-model="radio" :value="1">备选项1</xm-radio>
-    <xm-radio v-model="radio" :value="2">备选项2</xm-radio>
-    <xm-radio v-model="radio" disabled :value="3">备选项2</xm-radio>
-    <xm-radio v-model="radio" checked :value="4">备选项2</xm-radio>
+    <f-radio v-model="radio" :value="1">备选项1</f-radio>
+    <f-radio v-model="radio" :value="2">备选项2</f-radio>
+    <f-radio v-model="radio" disabled :value="3">备选项2</f-radio>
+    <f-radio v-model="radio" checked :value="4">备选项2</f-radio>
     <h3>复选按钮</h3>
-    <xm-checkbox v-model="checkbox" checked disabled value="1" name="1" @change="input">巴士</xm-checkbox>
-    <xm-checkbox v-model="checkbox" value="2" name="1" @change="input">火车</xm-checkbox>
-    <xm-checkbox v-model="checkbox" value="3" name="1" @change="input" disabled>飞机--disabled</xm-checkbox>
-    <xm-checkbox v-model="checkbox" value="4" name="1" @change="input">单车</xm-checkbox>
+    <f-checkbox v-model="checkbox" checked disabled value="1" name="1" @change="input">巴士</f-checkbox>
+    <f-checkbox v-model="checkbox" value="2" name="1" @change="input">火车</f-checkbox>
+    <f-checkbox v-model="checkbox" value="3" name="1" @change="input" disabled>飞机--disabled</f-checkbox>
+    <f-checkbox v-model="checkbox" value="4" name="1" @change="input">单车</f-checkbox>
     <h3>标签</h3>
-    <xm-tag>default</xm-tag>
-    <xm-tag v-if="closeFlag" closable @close="close">close</xm-tag>
-    <xm-tag type="primary">primary</xm-tag>
-    <xm-tag type="success">success</xm-tag>
-    <xm-tag type="warning">warning</xm-tag>
-    <xm-tag type="error">error</xm-tag>
-    <xm-tag round bg-color="#fc0" color="#e0439a" border-color="#fc0">自定义颜色</xm-tag>
+    <f-tag>default</f-tag>
+    <f-tag v-if="closeFlag" closable @close="close">close</f-tag>
+    <f-tag type="primary">primary</f-tag>
+    <f-tag type="success">success</f-tag>
+    <f-tag type="warning">warning</f-tag>
+    <f-tag type="error">error</f-tag>
+    <f-tag round bg-color="#fc0" color="#e0439a" border-color="#fc0">自定义颜色</f-tag>
     <h3>文本框</h3>
     <div class="row">
       <div class="col-md-12">
         <div class="col-md-6">
-          <xm-input type="email" v-model="inputval" @input="xminput" placeholder="请输入内容"></xm-input>
-          <xm-input type="tel" v-model="inputval" @input="xminput" placeholder="请输入内容"></xm-input>
-          <xm-input type="datetime-local" v-model="inputval" @input="xminput" placeholder="请输入内容"></xm-input>
-          <xm-input type="date" v-model="inputval" @input="xminput" placeholder="请输入内容"></xm-input>
-          <xm-input type="time" v-model="inputval" @input="xminput" placeholder="请输入内容"></xm-input>
+          <f-input type="email" v-model="inputval" @input="xminput" placeholder="请输入内容"></f-input>
+          <f-input type="tel" v-model="inputval" @input="xminput" placeholder="请输入内容"></f-input>
+          <f-input type="datetime-local" v-model="inputval" @input="xminput" placeholder="请输入内容"></f-input>
+          <f-input type="date" v-model="inputval" @input="xminput" placeholder="请输入内容"></f-input>
+          <f-input type="time" v-model="inputval" @input="xminput" placeholder="请输入内容"></f-input>
         </div>
         <div class="col-md-6">
-          <xm-input v-model="inputval" @input="xminput" placeholder="请输入内容"></xm-input>
-          <xm-input v-model="inputval" @input="xminput" disabled placeholder="请输入内容"></xm-input>
-          <xm-input v-model="inputval" @input="xminput" placeholder="请输入内容">
-            <span slot="icon" class="xm__icon--search"></span>
-          </xm-input>
-          <xm-input type="search" v-model="inputval" @input="xminput" placeholder="请输入内容"></xm-input>
-          <xm-input type="password" v-model="inputval" @input="xminput" placeholder="请输入内容"></xm-input>
-          <xm-input type="number" v-model="inputval" @input="xminput" placeholder="请输入内容"></xm-input>
+          <f-input v-model="inputval" @input="xminput" placeholder="请输入内容"></f-input>
+          <f-input v-model="inputval" @input="xminput" disabled placeholder="请输入内容"></f-input>
+          <f-input v-model="inputval" @input="xminput" placeholder="请输入内容">
+            <span slot="icon" class="fool__icon--search"></span>
+          </f-input>
+          <f-input type="search" v-model="inputval" @input="xminput" placeholder="请输入内容"></f-input>
+          <f-input type="password" v-model="inputval" @input="xminput" placeholder="请输入内容"></f-input>
+          <f-input type="number" v-model="inputval" @input="xminput" placeholder="请输入内容"></f-input>
         </div>
       </div>
     </div>
     <h4>slider滑块</h4>
     <div class="row">
       <div class="col-md-6">
-        <xm-slider :change="valueFun" :min="20" :max="80"></xm-slider>
+        <f-slider :change="valueFun" :min="20" :max="80"></f-slider>
       </div>
       <div class="col-md-6">
-        <xm-slider :change="valueFun" v-model="slider" :range="false"></xm-slider>
+        <f-slider :change="valueFun" v-model="slider" :range="false"></f-slider>
       </div>
     </div>
     <h4>步骤条</h4>
-    <xm-step :loading="loading" :step="step" :step-list="stepList"></xm-step>
+    <f-step :loading="loading" :step="step" :step-list="stepList"></f-step>
     <div class="row">
-      <xm-button type="primary" @click="next" icon="xm__icon--refresh">下一步</xm-button>
+      <f-button type="primary" @click="next" icon="fool__icon--refresh">下一步</f-button>
     </div>
     <h4>标记</h4>
-    <xm-badge :value="5">
-      <xm-button plain>评论</xm-button>
-    </xm-badge>
-    <xm-badge :value="10">
-      <xm-button plain>回复</xm-button>
-    </xm-badge>
-    <xm-badge :value="100" :max="99">
-      <xm-button plain>点赞</xm-button>
-    </xm-badge>
-    <xm-badge isDot>
-      <xm-button plain>关注</xm-button>
-    </xm-badge>
-    <xm-badge bgColor="#fc0" color="#e0439a" value="自定义">
-      <xm-button plain>自定义颜色</xm-button>
-    </xm-badge>
-    <xm-badge style="margin-left:2rem;" value="new">
-    </xm-badge>
-    <xm-badge style="margin-left:2rem;" value="hot">
-    </xm-badge>
+    <f-badge :value="5">
+      <f-button plain>评论</f-button>
+    </f-badge>
+    <f-badge :value="10">
+      <f-button plain>回复</f-button>
+    </f-badge>
+    <f-badge :value="100" :max="99">
+      <f-button plain>点赞</f-button>
+    </f-badge>
+    <f-badge isDot>
+      <f-button plain>关注</f-button>
+    </f-badge>
+    <f-badge bgColor="#fc0" color="#e0439a" value="自定义">
+      <f-button plain>自定义颜色</f-button>
+    </f-badge>
+    <f-badge style="margin-left:2rem;" value="new">
+    </f-badge>
+    <f-badge style="margin-left:2rem;" value="hot">
+    </f-badge>
     <h4>走马灯</h4>
     <div>
-      <xm-carousel :height="230" :autoplay="autoplay" :initialIndex="0" @change="carouselChange">
-          <xm-carousel-item v-for="(item,index) in carousel" :key="index">
+      <f-carousel :height="230" :autoplay="autoplay" :initialIndex="0" @change="carouselChange">
+          <f-carousel-item v-for="(item,index) in carousel" :key="index">
             <a href="#"><img :src="item" alt=""></a>
-          </xm-carousel-item>
-      </xm-carousel>
+          </f-carousel-item>
+      </f-carousel>
       <br/>
-      <xm-button type="primary" @click="closeAutoplay">切换自动播放</xm-button>
+      <f-button type="primary" @click="closeAutoplay">切换自动播放</f-button>
     </div>
     <!-- <h4>选项卡</h4> -->
-    <!-- <xm-tab :line-width="2" active-color="#fc378c">
-        <xm-tab-item :checked="demo2 === item" v-for="(item,index) in list2" @click="demo2 = item" :key="index"><h1>{{item}}</h1></xm-tab-item>
-    </xm-tab> -->
+    <!-- <f-tab :line-width="2" active-color="#fc378c">
+        <f-tab-item :checked="demo2 === item" v-for="(item,index) in list2" @click="demo2 = item" :key="index"><h1>{{item}}</h1></f-tab-item>
+    </f-tab> -->
     <h4>栅格和图标</h4>
-      <xm-grids row="6">
-        <xm-grid href="https://github.com/monw3c/foolui">
-          <span slot="icon" class="xm__icon--phone"></span>
+      <f-grids row="6">
+        <f-grid href="https://github.com/monw3c/foolui">
+          <span slot="icon" class="fool__icon--phone"></span>
           <span slot="text">phone</span>
-        </xm-grid>
-        <xm-grid @click="gridClick">
-          <span slot="icon" class="xm__icon--lbs"></span>
+        </f-grid>
+        <f-grid @click="gridClick">
+          <span slot="icon" class="fool__icon--lbs"></span>
           <span slot="text">lbs</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--qrcode"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--qrcode"></span>
           <span slot="text">qrcode</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--date"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--date"></span>
           <span slot="text">date</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--nochecked"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--nochecked"></span>
           <span slot="text">nochecked</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--checked"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--checked"></span>
           <span slot="text">checked</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--radio"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--radio"></span>
           <span slot="text">radio</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--search"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--search"></span>
           <span slot="text">search</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--close-outline"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--close-outline"></span>
           <span slot="text">close-outline</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--close"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--close"></span>
           <span slot="text">close</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--homefill"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--homefill"></span>
           <span slot="text">homefill</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--home"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--home"></span>
           <span slot="text">home</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--myfill"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--myfill"></span>
           <span slot="text">myfill</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--my"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--my"></span>
           <span slot="text">my</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--userfill"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--userfill"></span>
           <span slot="text">userfill</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--user"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--user"></span>
           <span slot="text">user</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--contact"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--contact"></span>
           <span slot="text">contact</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--link"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--link"></span>
           <span slot="text">link</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--unlock"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--unlock"></span>
           <span slot="text">unlock</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--lock"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--lock"></span>
           <span slot="text">lock</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--likefill"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--likefill"></span>
           <span slot="text">likefill</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--like"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--like"></span>
           <span slot="text">like</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--reduce-outline"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--reduce-outline"></span>
           <span slot="text">reduce-outline</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--reduce"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--reduce"></span>
           <span slot="text">reduce</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--add-outline"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--add-outline"></span>
           <span slot="text">add-outline</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--add"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--add"></span>
           <span slot="text">add</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--edit"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--edit"></span>
           <span slot="text">edit</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--delete"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--delete"></span>
           <span slot="text">delete</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--photodel"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--photodel"></span>
           <span slot="text">photodel</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--photo"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--photo"></span>
           <span slot="text">photo</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--msgfill"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--msgfill"></span>
           <span slot="text">msgfill</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--msg"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--msg"></span>
           <span slot="text">msg</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--menumore"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--menumore"></span>
           <span slot="text">menumore</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--menu"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--menu"></span>
           <span slot="text">menu</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--tips"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--tips"></span>
           <span slot="text">tips</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--refresh"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--refresh"></span>
           <span slot="text">refresh</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--share"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--share"></span>
           <span slot="text">share</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--totop"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--totop"></span>
           <span slot="text">totop</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--attachment"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--attachment"></span>
           <span slot="text">attachment</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--emoji"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--emoji"></span>
           <span slot="text">emoji</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--scan"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--scan"></span>
           <span slot="text">scan</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--mall"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--mall"></span>
           <span slot="text">mall</span>
-        </xm-grid>
+        </f-grid>
 
-        <xm-grid>
-          <span slot="icon" class="xm__icon--filter"></span>
+        <f-grid>
+          <span slot="icon" class="fool__icon--filter"></span>
           <span slot="text">filter</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--sort"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--sort"></span>
           <span slot="text">sort</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--loading"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--loading"></span>
           <span slot="text">loading</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--left"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--left"></span>
           <span slot="text">left</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--right"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--right"></span>
           <span slot="text">right</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--up"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--up"></span>
           <span slot="text">up</span>
-        </xm-grid>
-        <xm-grid>
-          <span slot="icon" class="xm__icon--down"></span>
+        </f-grid>
+        <f-grid>
+          <span slot="icon" class="fool__icon--down"></span>
           <span slot="text">down</span>
-        </xm-grid>
-      </xm-grids>
+        </f-grid>
+      </f-grids>
     </div>
 </template>
 

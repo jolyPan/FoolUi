@@ -1,5 +1,5 @@
 <template>
-    <div class="xm__grids" :class="'xm__grids--'+row">
+    <div class="fool__grids" :class="'fool__grids--'+row">
       <slot></slot>
     </div>
 </template>
@@ -7,7 +7,7 @@
 <script>
 
 export default {
-  name: 'xm-grids',
+  name: 'f-grids',
   props: {
     row: {
       type: String,

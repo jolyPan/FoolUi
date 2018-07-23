@@ -1,7 +1,7 @@
 <template>
-  <div class="xm-radio-wrap">
+  <div class="fool__radio-wrap">
     <!--这里设置了选中后的radio样式类,和禁用后的样式类-->
-    <label class="xm-radio" :class="{'checked':model==value,'disabled':disabled}">
+    <label class="fool__radio" :class="{'checked':model==value,'disabled':disabled}">
       <input type="radio" ref="radio" :value="value" @click="updateVal" :disabled="disabled">
     </label>
     <span class="content">
@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: 'xm-radio',//radio组件名称
+  name: 'f-radio',//radio组件名称
   model: {//自定义 v-model的 prop和event,这个定义的意思就是使用change事件更新model的值,以此来实时更新v-model的值
     prop: 'model',
     event: 'change'

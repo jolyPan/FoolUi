@@ -1,11 +1,11 @@
 <template>
   <transition name="custom-classes-transition" leave-active-class="animated flipOutY">
-    <div class="xm_tag" :class="['xm_tag--' + type,{round:round}]" :style="{backgroundColor:bgColor,borderColor:borderColor,color:color}">
+    <div class="fool_tag" :class="['fool_tag--' + type,{round:round}]" :style="{backgroundColor:bgColor,borderColor:borderColor,color:color}">
       <span>
         <slot>
         </slot>
       </span>
-      <i class="xm__icon--close" v-if="closable" @click="closeAction"></i>
+      <i class="fool__icon--close" v-if="closable" @click="closeAction"></i>
     </div>
   </transition>
 </template>
@@ -13,7 +13,7 @@
 <script>
 
 export default {
-  name: 'xm-tag',
+  name: 'f-tag',
   props: {
     type: {
       type: String,

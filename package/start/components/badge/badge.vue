@@ -1,9 +1,9 @@
 <template>
-    <div class="xm__badge" :style="{
+    <div class="fool__badge" :style="{
         marginRight: $refs.badge&& ($refs.badge.offsetWidth + 'px'),
     }">
         <slot></slot>
-        <span v-show="!hidden" ref="badge" class="xm__badge--content" :class="[
+        <span v-show="!hidden" ref="badge" class="fool__badge--content" :class="[
             isDot && 'is-dot', 
             $slots.default && 'is-fixed'
         ]" :style="{
@@ -16,7 +16,7 @@
 <script>
 
 export default {
-    name: 'xm-badge',
+    name: 'f-badge',
     props: {
         value:{
             type: [String,Number],

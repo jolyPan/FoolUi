@@ -1,16 +1,16 @@
 <template>
-    <a :href="computeHref" @click="gridAciton" class="xm__grid">
-        <div class="xm__grid--icon">
+    <a :href="computeHref" @click="gridAciton" class="fool__grid">
+        <div class="fool__grid--icon">
             <slot name='icon'></slot>
         </div>
-        <div class="xm__grid--text">
+        <div class="fool__grid--text">
             <slot name='text'></slot>
         </div>
     </a>
 </template>
 <script>
 export default {
-    name: "xm-grid",
+    name: "f-grid",
     props: {
         href: {
             type: String,

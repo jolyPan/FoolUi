@@ -1,14 +1,14 @@
 <template>
-    <div class="xm_slider" ref="mySlider">
-        <div class="xm_left-btn" :class="{xm_active:myPosition.isBtn==2}"></div>
-        <div class="xm_propo"></div>
-        <div class="xm_propo-bg"></div>
-        <div v-show="range" class="xm_right-btn" :class="{xm_active:myPosition.isBtn==1}"></div>
+    <div class="fool_slider" ref="mySlider">
+        <div class="fool_left-btn" :class="{fool_active:myPosition.isBtn==2}"></div>
+        <div class="fool_propo"></div>
+        <div class="fool_propo-bg"></div>
+        <div v-show="range" class="fool_right-btn" :class="{fool_active:myPosition.isBtn==1}"></div>
     </div>
 </template>
 <script type="text/javascript">
 export default {
-  name: "xm-slider",
+  name: "f-slider",
   model: {
     prop: "value",
     event: "change"

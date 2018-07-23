@@ -6,7 +6,7 @@
 
 <script>
 export default {
-    name:'xm-carousel-item',
+    name:'f-carousel-item',
     data() {
         return {
         };

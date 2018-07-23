@@ -1,10 +1,10 @@
 <template>
-  <label class="xm__checkbox" :class="[{'disabled':disabled}]">
-    <span class="xm__checkbox--input">
-      <span class="xm__checkbox--inner" :class="[{'is-checked':isChecked}]"></span>
+  <label class="fool__checkbox" :class="[{'disabled':disabled}]">
+    <span class="fool__checkbox--input">
+      <span class="fool__checkbox--inner" :class="[{'is-checked':isChecked}]"></span>
       <input :name='name' ref="checkbox" type="checkbox" :value="value" @change="onChange" :disabled="disabled" v-model="checkedModels" />
     </span>
-    <span class="xm__checkbox--text">
+    <span class="fool__checkbox--text">
       <slot></slot>
     </span>
   </label>
@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: 'xm-checkbox',
+  name: 'f-checkbox',
   model: {
     prop: 'model',
     event: 'change'

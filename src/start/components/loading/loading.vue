@@ -1,14 +1,14 @@
 <template>
   <transition>
-    <div class="xm__loading--wrap">
-      <div class="xm__mask" v-if="fullScreen"></div>
-      <div class="xm__loading bounceInDown animated" :class="[
-          {'xm__loading--fullScreen':fullScreen}
+    <div class="fool__loading--wrap">
+      <div class="fool__mask" v-if="fullScreen"></div>
+      <div class="fool__loading bounceInDown animated" :class="[
+          {'fool__loading--fullScreen':fullScreen}
           ]">
-        <span class="xm__loading--loader" :class="[
-          {'xm__loading--vertical':vertical,'borderRightTransparent':color}
+        <span class="fool__loading--loader" :class="[
+          {'fool__loading--vertical':vertical,'borderRightTransparent':color}
           ]" :style="{'width': width+'px','height': height+'px','border-color': color,'border-width': borderWidth+'px'}"></span>
-        <span class="xm__loading--text" v-if="hasText">
+        <span class="fool__loading--text" v-if="hasText">
           <slot>加载中...</slot>
         </span>
       </div>
@@ -19,7 +19,7 @@
 <script>
 
 export default {
-  name: 'xm-loading',
+  name: 'f-loading',
   props: {
     color: {
       type: String,

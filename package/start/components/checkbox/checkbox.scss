@@ -13,7 +13,7 @@
   transition: transform 0.15s ease-in 0.05s;
   transform-origin: center;
 }
-.xm__checkbox {
+.fool__checkbox {
   position: relative;
   input[type="checkbox"] {
     opacity: 0;
@@ -24,7 +24,7 @@
     height: 0;
     z-index: -1;
   }
-  .xm__checkbox--input {
+  .fool__checkbox--input {
     white-space: nowrap;
     cursor: pointer;
     outline: none;
@@ -32,7 +32,7 @@
     line-height: 1;
     position: relative;
     vertical-align: middle;
-    .xm__checkbox--inner {
+    .fool__checkbox--inner {
       display: inline-block;
       position: relative;
       border: 1px solid #dcdfe6;
@@ -51,12 +51,12 @@
     }
   }
   &.disabled {
-    .xm__checkbox--inner {
+    .fool__checkbox--inner {
       background-color: $btn-disable-bg;
       border: 1px solid $btn-disable-border;
       color: $btn-disable-color;
     }
-    .xm__checkbox--inner.is-checked {
+    .fool__checkbox--inner.is-checked {
       &::after {
         @include exactness($btn-disable-color);
       }

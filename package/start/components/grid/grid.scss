@@ -1,31 +1,31 @@
-.xm__grids {
+.fool__grids {
     position: relative;
     overflow: hidden;
     a:hover, a:focus{
         color: #23527c;
         text-decoration: none;
     }
-    &.xm__grids--2 .xm__grid{
+    &.fool__grids--2 .fool__grid{
         width: 50%;
     }
 
-    &.xm__grids--3 .xm__grid{
+    &.fool__grids--3 .fool__grid{
         width: 33.333333%;
     }
 
-    &.xm__grids--4 .xm__grid{
+    &.fool__grids--4 .fool__grid{
         width: 25%;
     }
 
-    &.xm__grids--5 .xm__grid{
+    &.fool__grids--5 .fool__grid{
         width: 20%;
     }
 
-    &.xm__grids--6 .xm__grid{
+    &.fool__grids--6 .fool__grid{
         width: 16.666667%;
     }
 
-    & .xm__grid {
+    & .fool__grid {
         position: relative;
         float: left;
         padding: 10px;
@@ -81,7 +81,7 @@
         transform: scaleX(0.5);
     }
 
-    & .xm__grid--icon {
+    & .fool__grid--icon {
         height: 28px;
         display: flex;
         justify-content: center;
@@ -94,7 +94,7 @@
         }
     }
 
-    & .xm__grid--text {
+    & .fool__grid--text {
         word-wrap: normal;
         text-overflow: ellipsis;
         white-space: nowrap;

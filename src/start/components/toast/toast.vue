@@ -1,10 +1,10 @@
 <template>
   <transition name="fade">
-    <div class="xm__toast--wrap" v-show="isVisible" ref="toast">
-      <div class="xm__mask" v-show="mask"></div>
-      <div class="xm__toast xm__toast--bounceInDown animated" :class='classz' :style='directions'>
-        <div v-if="type&&type=='default'" class=" xm__toast--loading">
-          <xm-loading :hasText="hasText" width="42" height="42" border-width="8" color="#efefef"></xm-loading>
+    <div class="fool__toast--wrap" v-show="isVisible" ref="toast">
+      <div class="fool__mask" v-show="mask"></div>
+      <div class="fool__toast fool__toast--bounceInDown animated" :class='classz' :style='directions'>
+        <div v-if="type&&type=='default'" class=" fool__toast--loading">
+          <f-loading :hasText="hasText" width="42" height="42" border-width="8" color="#efefef"></f-loading>
         </div>
         <div v-else>
           {{content}}
@@ -68,9 +68,9 @@ export default {
   computed: {
     classz() {
       if (!this.type) {
-        return 'xm__toast--text'
+        return 'fool__toast--text'
       } else {
-        return 'xm__toast--loading'
+        return 'fool__toast--loading'
       }
     },
     directions() {

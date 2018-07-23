@@ -1,9 +1,9 @@
-.xm_slider {
+.fool_slider {
   width: 100%;
   position: relative;
   height: 2rem;
-  .xm_left-btn,
-  .xm_right-btn {
+  .fool_left-btn,
+  .fool_right-btn {
     position: absolute;
     z-index: 3;
     top: 50%;
@@ -14,7 +14,7 @@
     border-radius: 50%;
     border: .2rem solid #409eff;
   }
-  .xm_propo {
+  .fool_propo {
     width: 0%;
     height: 0.5rem;
     background: #409eff;
@@ -25,7 +25,7 @@
     left: 0;
     z-index: 2;
   }
-  .xm_propo-bg {
+  .fool_propo-bg {
     background: #e4e7ed;
     border-radius: 0.16rem;
     height: 0.5rem;
@@ -36,7 +36,7 @@
     left: 0;
     z-index: 1;
   }
-  .xm_active {
+  .fool_active {
     &:before {
       border-bottom-color: #ff8c30;
     }
