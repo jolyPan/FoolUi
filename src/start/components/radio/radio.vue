@@ -4,7 +4,7 @@
     <label class="fool__radio" :class="{'checked':model==value,'disabled':disabled}">
       <input type="radio" ref="radio" :value="value" @click="updateVal" :disabled="disabled">
     </label>
-    <span class="content">
+    <span class="fool__radio--content">
       <slot></slot>
     </span>
   </div>

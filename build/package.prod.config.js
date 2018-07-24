@@ -46,8 +46,8 @@ module.exports = merge(baseWebpackConfig, {
             : { safe: true }
         }),
         new CopyWebpackPlugin([
-            // {output}/file.txt
-            { from: `./src/start`,to:`./start`}
+            { from: `./src/start`,to:`./start`},
+            { from: `./package`,to:`../docs/package`},
         ]),
     ]
 })

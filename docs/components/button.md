@@ -1,27 +1,37 @@
 # Button 按钮
-#### 基础用法
-# Button 按钮
 ----
-### 基础用法
-使用```type```、```plain```、```icon```、```loading```、```long```、```bg-color```、```color```、```border-color```、```no-radius```、```block```和```round```属性来定义 Button 的样式。
-``` html
-<f-button>普通</f-button>
-<f-button type="primary" @click="btnClick" icon="xm__icon--refresh">主要</f-button>
-<f-button type="error" icon="xm__icon--likefill"></f-button>
-<f-button type="warning" disabled>禁止</f-button>
-<f-button plain>简约</f-button>
-<f-button loading no-radius type="primary">loading状态</f-button>
-<f-button no-radius bg-color="#f56c6c" color="#fff" border-color="#f56c6c">自定义颜色</f-button>
-<f-button no-radius>无圆角</f-button>
-<f-button no-radius type="text" icon="xm__icon--checked">文字</f-button>
-<f-button circle type="primary" @click="btnClick" icon="xm__icon--refresh"></f-button>
-<f-button circle type="success" icon="xm__icon--checked"></f-button>
-<f-button circle @click="btnClick" icon="xm__icon--search"></f-button>
-<f-button circle type="error" icon="xm__icon--delete"></f-button>
-<f-button circle type="warning" icon="xm__icon--lock"></f-button>
-<f-button round long>100%宽圆角</f-button>
-```
+#### 基础用法
+<vuep  :options="{ tabSize: 2 }"  template="#example"></vuep>
 
+<script v-pre type="text/x-template" id="example">
+  <template>
+      <div>
+        <f-button>普通</f-button>
+        <f-button type="primary" icon="fool__icon--refresh">主要</f-button>
+        <f-button type="error" icon="fool__icon--likefill"></f-button>
+        <f-button type="warning" disabled>禁止</f-button>
+        <f-button plain>简约</f-button>
+        <f-button loading no-radius type="primary">loading状态</f-button>
+        <f-button no-radius bg-color="#f56c6c" color="#fff" border-color="#f56c6c">自定义颜色</f-button>
+        <f-button no-radius>无圆角</f-button>
+        <f-button no-radius type="text" icon="fool__icon--checked">文字</f-button>
+        <f-button circle type="primary" icon="fool__icon--refresh"></f-button>
+        <f-button circle type="success" icon="fool__icon--checked"></f-button>
+        <f-button circle icon="fool__icon--search"></f-button>
+        <f-button circle type="error" icon="fool__icon--delete"></f-button>
+        <f-button circle type="warning" icon="fool__icon--lock"></f-button>
+        <f-button round long>100%宽圆角</f-button>
+      </div>
+  </template>
+  <script>
+    export default {
+      data: function () {
+        return { }
+      },
+      methods: {      }
+    }
+  </script>
+</script>
 ### 属性
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
