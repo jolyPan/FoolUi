@@ -13,7 +13,7 @@ module.exports = {
         //path.resolve是nodejs的方法 返回一个绝对路径
         path: path.resolve(__dirname, '../package'),
         //打包后的根目录
-        publicPath: '/package/',
+        publicPath: './',
         library: 'foolui',
         libraryTarget: 'umd',
         umdNamedDefine: true
