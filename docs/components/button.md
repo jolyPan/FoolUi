@@ -6,7 +6,7 @@
 <script v-pre type="text/x-template" id="example">
   <template>
       <div>
-        <f-button>普通</f-button>
+        <f-button @click="btnClick">普通</f-button>
         <f-button type="primary" icon="fool__icon--refresh">主要</f-button>
         <f-button type="error" icon="fool__icon--likefill"></f-button>
         <f-button type="warning" disabled>禁止</f-button>
@@ -28,7 +28,11 @@
       data: function () {
         return { }
       },
-      methods: {      }
+      methods: {
+        btnClick() {
+          this.$toast.text({content: 2})
+        },
+      }
     }
   </script>
 </script>

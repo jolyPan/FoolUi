@@ -1,6 +1,6 @@
 # Checkbox 多选框
 ----
-##### 基础用法
+#### 基础用法
 <vuep  :options="{ tabSize: 2 }"  template="#example"></vuep>
 
 <script v-pre type="text/x-template" id="example">
@@ -16,7 +16,8 @@
     export default {
       data: function () {
         return {
-            checkbox:2
+            checkbox:[],
+            // or Boolean
          }
       },
       methods: {
@@ -27,6 +28,14 @@
     }
   </script>
 </script>
+
+!> v-model : ```[Boolean, Array]```
+
+### 事件
+| 事件名称      | 说明    | 回调参数      |
+|---------- |-------- |---------- |
+| change     | 绑定值变化时触发的事件   | 选中的 Checkbox label 列表 |
+
 ### 属性
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |

@@ -37,7 +37,7 @@ const install = function(Vue) {
     if (components[key].name) {
       Vue.component(components[key].name, components[key]);
     } else {
-      console.log("name为空");
+      // console.log("name为空");
     }
   });
   Vue.prototype.$toast = Toast;
