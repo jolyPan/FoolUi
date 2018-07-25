@@ -32,7 +32,9 @@ export default {
     },
     stepList: {
       type: Array,
-      default: () => { }
+      default: () => { 
+        return []
+      }
     },
     direction: {
       type: String,

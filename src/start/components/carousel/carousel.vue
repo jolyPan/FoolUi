@@ -51,6 +51,7 @@ export default {
             }
         },
         height:function(){
+            this.height = this.height < 150 ? 150 : this.height
             this.setItemSize()
         }
     },

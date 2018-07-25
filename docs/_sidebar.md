@@ -10,4 +10,3 @@
  * [Badge 标记](components/badge.md)
  * [Carousel 走马灯](components/carousel.md)
  * [Icon 图标](components/icon.md)
- * [Grid 栅格](components/grid.md)

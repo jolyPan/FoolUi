@@ -1,9 +1,7 @@
 <template>
-    <div class="fool__badge" :style="{
-        marginRight: $refs.badge&& ($refs.badge.offsetWidth + 'px'),
-    }">
+    <div class="fool__badge">
         <slot></slot>
-        <span v-show="!hidden" ref="badge" class="fool__badge--content" :class="[
+        <span v-show="!hidden" ref="badge" class="fool__badge--content clearfix" :class="[
             isDot && 'is-dot', 
             $slots.default && 'is-fixed'
         ]" :style="{
@@ -18,8 +16,8 @@
 export default {
     name: 'f-badge',
     props: {
-        value:{
-            type: [String,Number],
+        value: {
+            type: [String, Number],
             default: ''
         },
         bgColor: {
@@ -30,7 +28,7 @@ export default {
             type: String,
             default: ''
         },
-        hidden:{
+        hidden: {
             type: Boolean,
             default: false
         },
@@ -42,19 +40,19 @@ export default {
             type: Number,
             default: null
         },
-        isDot:{
+        isDot: {
             type: Boolean,
             default: false
         }
     },
     computed: {
-        content: function() {
-            if(typeof this.value === 'number' && typeof this.max === 'number') {
-                return this.value > this.max ? `${this.max}+` : this.value; 
+        content: function () {
+            if (typeof this.value === 'number' && typeof this.max === 'number') {
+                return this.value > this.max ? `${this.max}+` : this.value;
             }
             return this.value;
         },
-        
+
     },
     data() {
         return {

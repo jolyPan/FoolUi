@@ -3,6 +3,22 @@
 #### 基础用法
 <vuep  :options="{ tabSize: 2 }"  template="#example"></vuep>
 
+### 属性
+| 参数      | 说明    | 类型      | 可选值       | 默认值   |
+|---------- |-------- |---------- |-------------  |-------- |
+| long     | 长按钮   | Boolean  |    — | false   |
+| loading     | 是否有加载效果   | Boolean  |    — | false   |
+| type     | 类型   | String    |   primary,success,warning,danger,info |     —    |
+| plain     | 是否简约按钮   | Boolean    | — | false   |
+| disabled  | 是否禁用状态    | Boolean   | —   | false   |
+| icon  | 图标，已有的图标库中的图标名 | String   |  —  |  —  |
+| round     | 圆角   | Boolean  |    — | false   |
+| block     | 块级按钮   | Boolean  |    — | false   |
+| bg-color     | 背景颜色   | String    | 自定义 |     —    |
+| color     | 文字颜色   | String    |  自定义 |     —    |
+| border-color     | 边框颜色   | String    |   自定义 |     —    | 
+| no-radius     | 无边框   | String    |   自定义 |     —    | 
+
 <script v-pre type="text/x-template" id="example">
   <template>
       <div>
@@ -36,19 +52,3 @@
     }
   </script>
 </script>
-### 属性
-| 参数      | 说明    | 类型      | 可选值       | 默认值   |
-|---------- |-------- |---------- |-------------  |-------- |
-| long     | 长按钮   | Boolean  |    — | false   |
-| loading     | 是否有加载效果   | Boolean  |    — | false   |
-| type     | 类型   | string    |   primary,success,warning,danger,info |     —    |
-| plain     | 是否简约按钮   | Boolean    | — | false   |
-| disabled  | 是否禁用状态    | Boolean   | —   | false   |
-| icon  | 图标，已有的图标库中的图标名 | string   |  —  |  —  |
-| round     | 圆角   | Boolean  |    — | false   |
-| block     | 块级按钮   | Boolean  |    — | false   |
-| bg-color     | 背景颜色   | string    | 自定义 |     —    |
-| color     | 文字颜色   | string    |  自定义 |     —    |
-| border-color     | 边框颜色   | string    |   自定义 |     —    | 
-| no-radius     | 无边框   | string    |   自定义 |     —    | 
-

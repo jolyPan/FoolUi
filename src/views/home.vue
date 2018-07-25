@@ -102,9 +102,9 @@
     <f-badge bgColor="#fc0" color="#e0439a" value="自定义">
       <f-button plain>自定义颜色</f-button>
     </f-badge>
-    <f-badge style="margin-left:2rem;" value="new">
+    <f-badge value="new">
     </f-badge>
-    <f-badge style="margin-left:2rem;" value="hot">
+    <f-badge value="hot">
     </f-badge>
     <h4>走马灯</h4>
     <div>
@@ -122,7 +122,7 @@
     </f-tab> -->
     <h4>栅格和图标</h4>
       <f-grids row="6">
-        <f-grid href="https://github.com/monw3c/foolui">
+        <f-grid href="https://github.com/jolyPan/FoolUi">
           <span slot="icon" class="fool__icon--phone"></span>
           <span slot="text">phone</span>
         </f-grid>

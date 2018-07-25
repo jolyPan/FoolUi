@@ -3,6 +3,22 @@
 #### 基础用法
 <vuep  :options="{ tabSize: 2 }"  template="#example"></vuep>
 
+!> v-model : ```[Boolean, Array]```
+
+### 事件
+| 事件名称      | 说明    | 回调参数      |
+|---------- |-------- |---------- |
+| change     | 绑定值变化时触发的事件   | 选中的 Checkbox label 列表 |
+
+### 属性
+| 参数      | 说明    | 类型      | 可选值       | 默认值   |
+|---------- |-------- |---------- |-------------  |-------- |
+| value     | checkbox的value属性   | String, Number  |    — | —   |
+| checked     | 是否默认选中   | Boolean    |   — |     false    |
+| disabled  | 是否禁用状态    | Boolean   | —   | false   |
+| name  |  checkbox的name属性   | String   | —   | —   |
+
+
 <script v-pre type="text/x-template" id="example">
   <template>
     <div>
@@ -28,20 +44,3 @@
     }
   </script>
 </script>
-
-!> v-model : ```[Boolean, Array]```
-
-### 事件
-| 事件名称      | 说明    | 回调参数      |
-|---------- |-------- |---------- |
-| change     | 绑定值变化时触发的事件   | 选中的 Checkbox label 列表 |
-
-### 属性
-| 参数      | 说明    | 类型      | 可选值       | 默认值   |
-|---------- |-------- |---------- |-------------  |-------- |
-| value     | checkbox的value属性   | String, Number  |    — | —   |
-| checked     | 是否默认选中   | Boolean    |   — |     false    |
-| disabled  | 是否禁用状态    | Boolean   | —   | false   |
-| name  |  checkbox的name属性   | String   | —   | —   |
-
-
