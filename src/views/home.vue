@@ -24,7 +24,7 @@
     <f-button circle type="warning" icon="fool__icon--lock"></f-button>
     <br/>
     <br/>
-    <f-button round long>100%宽圆角</f-button>
+    <f-button round long>100%宽圆角 </f-button>
     <br/>
     <br/>
     <f-button-group class="btn__group">
