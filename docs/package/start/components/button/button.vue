@@ -1,5 +1,5 @@
 <template>
-  <button class="fool__btn" @click="handleClick" :style="{backgroundColor: bgColor, color: color, 'border-color':borderColor}" :class="['fool__btn--'+type,{'is-plain': plain, 'is-round': round,'circle':circle, 'is-long': long, 'fool__btn--block': block, 'no-radius': noRadius},iconClass]" :disabled="disabled">
+  <button class="fool__btn" @click="handleClick" :style="{backgroundColor: bgColor, color: color, 'border-color':borderColor,fontSize:fontSize}" :class="['fool__btn--'+type,{'is-plain': plain, 'is-round': round,'circle':circle, 'is-long': long, 'fool__btn--block': block, 'no-radius': noRadius},iconClass]" :disabled="disabled">
     <i :class="icon" v-if="icon"></i>
     <i class="fool__icon--loading" v-if="loading && !icon"></i>
     <slot></slot>
@@ -45,6 +45,10 @@ export default {
     circle:{
       type:Boolean,
       default:false
+    },
+    fontSize:{
+      type: String,
+      default: '1.6rem'
     }
   },
   methods: { //绑定的方法
