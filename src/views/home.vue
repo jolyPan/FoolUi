@@ -120,6 +120,10 @@
     <!-- <f-tab :line-width="2" active-color="#fc378c">
         <f-tab-item :checked="demo2 === item" v-for="(item,index) in list2" @click="demo2 = item" :key="index"><h1>{{item}}</h1></f-tab-item>
     </f-tab> -->
+    <h4>弹框</h4>
+    <f-button @click="messagebox">消息提示</f-button>
+    <f-button type="primary" @click="cancelmessagebox">确认消息</f-button>
+    <f-button type="error" @click="prompt">提交内容</f-button>
     <h4>栅格和图标</h4>
       <f-grids row="6">
         <f-grid href="https://github.com/jolyPan/FoolUi">
@@ -345,6 +349,33 @@ export default {
     };
   },
   methods: {
+    prompt(){
+      this.$Prompt({
+          isShowCancelBtn:true,
+          isShowConfimrBtn:true
+        }).then(function(value){
+          console.log(value)
+        },function(value){
+          console.log(value)
+        })
+    },
+    cancelmessagebox(){
+      this.$Alert('标题名称','这是一段内容！',{
+        isShowCancelBtn:true,
+        isShowConfimrBtn:true
+      }).then(function(value){
+        console.log(value)
+      },function(value){
+        console.log(value)
+      })
+    },
+    messagebox(){
+      this.$Alert().then(function(value){
+        console.log(value)
+      },function(value){
+        console.log(value)
+      })
+    },
     carouselChange(index){
       console.log(index)
     },

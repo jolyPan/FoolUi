@@ -18,6 +18,7 @@
 | color     | 文字颜色   | String    |  自定义 |     —    |
 | border-color     | 边框颜色   | String    |   自定义 |     —    | 
 | no-radius     | 无边框   | String    |   自定义 |     —    | 
+| font-size     | 自定义按钮字体大小   | String    |   自定义 |     1.6rem    | 
 
 <script v-pre type="text/x-template" id="example">
   <template>

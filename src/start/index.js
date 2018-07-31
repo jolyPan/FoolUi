@@ -13,6 +13,7 @@ import Step from "./components/step/index";
 import Carousel from "./components/carousel/index";
 import Badge from "./components/badge/index";
 import Tab from "./components/tab/index";
+import MessageBox from "./components/messagebox/index";
 const components = {
   Carousel,
   Tab,
@@ -29,7 +30,7 @@ const components = {
   Grid,
   Grids,
   Slider,
-  Step
+  Step,
 };
 const install = function(Vue) {
   //   components.map(component => Vue.component(component.name, component))
@@ -40,7 +41,10 @@ const install = function(Vue) {
       // console.log("name为空");
     }
   });
-  Vue.prototype.$toast = Toast;
+  Vue.prototype.$Toast = Toast;
+  Vue.prototype.$Alert = MessageBox.alert
+  Vue.prototype.$Prompt = MessageBox.prompt
+  
 };
 
 if (typeof window !== "undefined" && window.Vue) {
