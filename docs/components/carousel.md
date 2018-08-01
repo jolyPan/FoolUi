@@ -15,7 +15,7 @@
         <div>
             <f-carousel :height="150" :autoplay="autoplay" :initialIndex="0" @change="carouselChange">
                 <f-carousel-item v-for="(item,index) in carousel" :key="index">
-                    <a href="#"><img :src="item" alt=""></a>
+                    <a href="#"><img  width="100%" height="100%" :src="item" alt=""></a>
                 </f-carousel-item>
             </f-carousel>
         <br/>

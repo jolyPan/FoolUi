@@ -33,12 +33,7 @@ export default {
       currentMsg.title = title;
     }
     if (typeof options === "object") {
-      Object.assign(currentMsg, {
-        isShowCancelBtn:options.isShowCancelBtn || false,
-        isShowConfimrBtn:options.isShowConfimrBtn  || false,
-        cancelBtnText:options.cancelBtnText  || '取消',
-        confirmBtnText:options.confirmBtnText || '确认',
-      });
+      Object.assign(currentMsg, options);
     }
     return currentMsg
       .showMsgBox()
@@ -56,13 +51,7 @@ export default {
       open();
     }
     if (typeof options === "object") {
-      Object.assign(currentMsg, {
-        isShowCancelBtn:options.isShowCancelBtn || false,
-        isShowConfimrBtn:options.isShowConfimrBtn  || false,
-        cancelBtnText:options.cancelBtnText  || '取消',
-        confirmBtnText:options.confirmBtnText || '确认',
-        isShowInput:true
-      });
+      Object.assign(currentMsg, options);
     }
     return currentMsg
       .showMsgBox()

@@ -67,15 +67,16 @@
         outline: none;
         padding: 0 1em;
       }
-      .btn-group {
+      .fool__messagebox--btn-group {
         margin-top: 1em;
         float: right;
         overflow: hidden;
-        .btn-confirm {
-          margin-left: 1em;
-        }
         .fool__btn{
           font-size: 1.2rem;
+          i.fool__icon--loading{
+            margin-right: 1rem;
+            font-size: 1.3rem;
+          }
         }
       }
     }

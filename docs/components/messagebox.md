@@ -18,7 +18,8 @@
     <div>
       <f-button @click="messagebox">消息提示</f-button>
       <f-button type="primary" @click="cancelmessagebox">确认消息</f-button>
-      <f-button type="error" @click="prompt">提交内容</f-button>
+      <f-button type="success" @click="prompt">提交内容</f-button>
+      <f-button type="warning" @click="promptloading">loading状态</f-button>
     </div>
   </template>
   <script>
@@ -55,6 +56,27 @@
           },function(value){
             console.log(value)
           })
+        },
+        promptloading(){
+          let confirmButtonLoading = false
+          let confirmBtnText = "确认"
+          this.$Prompt({
+              isShowCancelBtn:true,
+              isShowConfimrBtn:true,
+              beforeClose:(action,instance,done)=>{
+                instance.confirmBtnText = '执行中...'
+                instance.confirmButtonLoading = true
+                setTimeout(()=>{
+                  instance.confirmBtnText = '确认'
+                  instance.confirmButtonLoading = false
+                  done()
+                },1000)
+              }
+            }).then(function(value){
+              console.log(value)
+            },function(value){
+              console.log(value)
+            })
         },
       }
     }

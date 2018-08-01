@@ -123,7 +123,8 @@
     <h4>弹框</h4>
     <f-button @click="messagebox">消息提示</f-button>
     <f-button type="primary" @click="cancelmessagebox">确认消息</f-button>
-    <f-button type="error" @click="prompt">提交内容</f-button>
+    <f-button type="success" @click="prompt">提交内容</f-button>
+    <f-button type="warning" @click="promptloading">loading状态</f-button>
     <h4>栅格和图标</h4>
       <f-grids row="6">
         <f-grid href="https://github.com/jolyPan/FoolUi">
@@ -345,10 +346,31 @@ export default {
       loading: true,
       autoplay:false,
       demo2: '美食',
-      list2: ['精选', '美食', '电影', '酒店', '外卖']
+      list2: ['精选', '美食', '电影', '酒店', '外卖'],
     };
   },
   methods: {
+    promptloading(){
+      let confirmButtonLoading = false
+      let confirmBtnText = "确认"
+      this.$Prompt({
+          isShowCancelBtn:true,
+          isShowConfimrBtn:true,
+          beforeClose:(action,instance,done)=>{
+            instance.confirmBtnText = '执行中...'
+            instance.confirmButtonLoading = true
+            setTimeout(()=>{
+              instance.confirmBtnText = '确认'
+              instance.confirmButtonLoading = false
+              done()
+            },1000)
+          }
+        }).then(function(value){
+          console.log(value)
+        },function(value){
+          console.log(value)
+        })
+    },
     prompt(){
       this.$Prompt({
           isShowCancelBtn:true,
