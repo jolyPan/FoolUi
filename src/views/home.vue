@@ -356,6 +356,7 @@ export default {
       this.$Prompt({
           isShowCancelBtn:true,
           isShowConfimrBtn:true,
+          isShowInput:true,
           beforeClose:(action,instance,done)=>{
             instance.confirmBtnText = '执行中...'
             instance.confirmButtonLoading = true
