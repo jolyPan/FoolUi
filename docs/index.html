@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>基于vue2.x，可复用UI组件</title>
@@ -10,24 +11,48 @@
   <link rel="stylesheet" href="//unpkg.com/vuep/dist/vuep.css">
   <link rel="stylesheet" href="/FoolUi/package/foolui.min.css">
 </head>
+
 <body>
   <div id="app"></div>
   <script>
     window.$docsify = {
       name: 'Fool-ui',
-      auto2top:true,
+      auto2top: true,
       nameLink: '/#/README',
-      repo:'https://github.com/jolyPan/FoolUi',
+      repo: 'https://github.com/jolyPan/FoolUi',
       mergeNavbar: true,
       loadSidebar: true,
-      subMaxLevel:2,
+      subMaxLevel: 2,
       maxLevel: 4,
+      plugins: [
+        function (hook) {
+          var footer = [
+            '<hr/>',
+            '<footer>',
+            '<span><a href=" ">jolyPan</a > &copy;2018.</span>',
+            '<span>Proudly published with <a href="https://github.com/jolyPan/FoolUi" target="_blank">fool-ui</a >.</span>',
+            '</footer>'
+          ].join('')
+
+          hook.afterEach(function (html) {
+            return html + footer
+          })
+        }
+      ],
+      search: {
+        depth: 6,
+        placeholder: '请输入关键字',
+        noData:'无匹配结果！',
+        maxAge: 86400000,
+      },
     }
   </script>
-<script src="https://unpkg.com/babel-standalone/babel.min.js"></script>
-<script src="//unpkg.com/vue/dist/vue.min.js"></script>
-<script src="//unpkg.com/vuep/dist/vuep.min.js"></script>
-<script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
-<script src="/FoolUi/package/foolui.min.js"></script>
+  <script src="https://unpkg.com/babel-standalone/babel.min.js"></script>
+  <script src="//unpkg.com/vue/dist/vue.min.js"></script>
+  <script src="//unpkg.com/vuep/dist/vuep.min.js"></script>
+  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
+  <script src="/FoolUi/package/foolui.min.js"></script>
 </body>
+
 </html>
