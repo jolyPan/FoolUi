@@ -33,7 +33,8 @@
         prompt(){
           this.$Prompt({
               isShowCancelBtn:true,
-              isShowConfimrBtn:true
+              isShowConfimrBtn:true,
+              isShowInput:true
             }).then(function(value){
               console.log(value)
             },function(value){

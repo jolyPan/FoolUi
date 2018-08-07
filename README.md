@@ -1,4 +1,4 @@
-[![NPM version](https://img.shields.io/npm/v/fool-ui.svg)](https://www.npmjs.com/package/fool-ui)
+[![NPM version](https://img.shields.io/npm/v/fool-ui.svg)](https://www.npmjs.com/package/v-fool)
 
 # FoolUi
 
