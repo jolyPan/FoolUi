@@ -2,7 +2,7 @@
 
 # FoolUi
 
-> 基于vue2.x，可复用UI组件 [在线示例](https://jolypan.github.io/FoolUi/dist/#/) [在线文档](https://jolypan.github.io/FoolUi/#/)
+> 基于vue2.x，可复用UI组件 [在线示例]([https://jolypan.github.io/FoolUi/dist/#/]{:target="_blank"}) [在线文档]([https://jolypan.github.io/FoolUi/#/]{:target="_blank"})
 
 ## 安装
 
