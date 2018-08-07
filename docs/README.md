@@ -42,4 +42,4 @@ components: {
 ``` 
 ## 查看示例  
 
-[在线示例](https://jolypan.github.io/FoolUi/dist/#/) 
+[在线示例](https://jolypan.github.io/FoolUi/dist/#/?_blank) 
