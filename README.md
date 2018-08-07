@@ -7,13 +7,13 @@
 ## 安装
 
 ``` bash
-npm install fool-ui --save
+npm install v-fool --save
 ```
 ## 快速开始
 ``` bash
 import Vue from 'vue'
-import Fool from 'fool-ui'
-import 'fool-ui/package/foolui.min.css'  
+import Fool from 'v-fool'
+import 'v-fool/package/foolui.min.css'  
  
 Vue.use(Fool)
 ```
@@ -26,12 +26,12 @@ Vue.use(Fool)
 
 ``` bash
 # 全局组件 main.js引入
-import Toast from 'fool-ui/package/start/components/toast'
+import Toast from 'v-fool/package/start/components/toast'
 Vue.prototype.$toast = Toast
 
 # 一般组件
-import Button from 'fool-ui/package/start/components/button'
-import ButtonGroup from 'fool-ui/package/start/components/buttongroup'
+import Button from 'v-fool/package/start/components/button'
+import ButtonGroup from 'v-fool/package/start/components/buttongroup'
 ...
 
 components: {
