@@ -7,7 +7,7 @@
 ## 安装
 
 ``` bash
-npm install fool-ui
+npm install fool-ui --save
 ```
 ## 快速开始
 ``` bash
