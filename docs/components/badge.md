@@ -45,7 +45,7 @@
       },
       methods: {
         btnClick() {
-          this.$toast.text({content: 2})
+          this.$Toast.text({content: 2})
         },
       }
     }

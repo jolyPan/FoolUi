@@ -27,7 +27,7 @@ Vue.use(Fool)
 ``` bash
 # 全局组件 main.js引入
 import Toast from 'v-fool/package/start/components/toast'
-Vue.prototype.$toast = Toast
+Vue.prototype.$Toast = Toast
 
 # 一般组件
 import Button from 'v-fool/package/start/components/button'

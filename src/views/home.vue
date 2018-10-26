@@ -418,7 +418,7 @@ export default {
       }
     },
     btnClick() {
-      this.$toast.text({
+      this.$Toast.text({
         content: "风波之"
       });
     },
